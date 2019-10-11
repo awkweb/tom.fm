@@ -1,7 +1,5 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import 'typeface-inter'
 
-// You can delete this file if you're not using it
+import 'sanitize.css'
+import 'sanitize.css/typography.css'
+import 'sanitize.css/forms.css'
