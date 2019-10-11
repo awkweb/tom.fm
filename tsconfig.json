@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "baseUrl": "./",
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "lib": ["dom", "esnext"],
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noEmit": true,
+        "noUnusedLocals": false,
+        "paths": {
+            "src/*": ["src/*"]
+        },
+        "plugins": [
+            {
+                "name": "typescript-styled-plugin"
+            }
+        ],
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "strict": false,
+        "target": "esnext"
+    },
+    "exclude": ["node_modules", "public", ".cache"],
+    "include": ["src/theme/styled.d.ts", "**/*.ts", "**/*.tsx"]
+}

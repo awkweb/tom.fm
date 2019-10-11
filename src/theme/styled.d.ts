@@ -1,0 +1,66 @@
+import 'styled-components'
+
+import * as _Border from './types/border'
+import * as _Color from './types/color'
+import * as _Position from './types/position'
+import * as _Responsive from './types/responsive'
+import * as _Size from './types/size'
+import * as _Typography from './types/typography'
+
+declare module 'styled-components' {
+    export interface DefaultTheme {
+        borderStyles: {
+            [_Border.Style.None]: string
+            [_Border.Style.Solid]: string
+        }
+        borderWidths: {
+            [_Border.Width.Normal]: string
+        }
+        breakpoints:
+            | string[]
+            | {
+                  [_Responsive.Breakpoint.Sm]: string
+                  [_Responsive.Breakpoint.Md]: string
+                  [_Responsive.Breakpoint.Lg]: string
+                  [_Responsive.Breakpoint.Xl]: string
+              }
+        colors: {
+            [_Color.Palette.Accent]: string
+            [_Color.Palette.Background]: string
+            [_Color.Palette.Muted]: string
+            [_Color.Palette.Primary]: string
+            [_Color.Palette.Secondary]: string
+            [_Color.Palette.Selection]: string
+            [_Color.Palette.Text]: string
+        }
+        fonts: {
+            [_Typography.Font.Body]: string
+            [_Typography.Font.Heading]: string
+            [_Typography.Font.Monospace]: string
+        }
+        fontSizes: {
+            [_Typography.Size.Heading]: string
+            [_Typography.Size.Body]: string
+            [_Typography.Size.Small]: string
+        }
+        fontWeights: {
+            [_Typography.Weight.Bold]: number
+            [_Typography.Weight.Normal]: number
+        }
+        lineHeights: {
+            [_Typography.LineHeight.Body]: string
+            [_Typography.LineHeight.Heading]: string
+        }
+        radii: {
+            [_Border.Radius.None]: number
+        }
+        sizes: {
+            [_Size.Size.HomeWidth]: string
+            [_Size.Size.PostWidth]: string
+            [_Size.Size.PageHeight]: string
+            [_Size.Size.PageWidth]: string
+        }
+        space: string[]
+        zIndices: number[]
+    }
+}
