@@ -14,7 +14,13 @@ const Wrapper = ({ element }: Props) => (
     <ThemeProvider theme={theme}>
         <>
             <GlobalStyles />
-            <Box el={Box.Element.Main}>{element}</Box>
+            <Box
+                el={Box.Element.Main}
+                mt={{ sm: 6, lg: 8 }}
+                px={{ sm: 6, lg: 10 }}
+            >
+                {element}
+            </Box>
         </>
     </ThemeProvider>
 )

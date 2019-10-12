@@ -1,11 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
-import Layout from 'src/components/layout'
 import Head from 'src/components/head'
 import Image from 'src/components/image'
 import Text from 'src/components/text'
-import Box from 'src/components/Box'
+import Field from 'src/components/field'
 
 const IndexPage = ({
     data: {
@@ -23,65 +22,25 @@ const IndexPage = ({
         },
     },
 }) => (
-    <Layout>
+    <>
         <Head title="Home" />
-        <Box display={Box.Display.Flex} mb={{ sm: 10, lg: 0 }}>
-            <Text
-                color={Text.Color.Secondary}
-                el={Text.Element.Label}
-                size={Text.Size.Small}
-                weight={Text.Weight.Bold}
-            >
-                Image
-            </Text>
+        <Field label="Image" noBorder>
             <Image />
-        </Box>
-        <Box display={Box.Display.Flex}>
-            <Text
-                color={Text.Color.Secondary}
-                el={Text.Element.Label}
-                size={Text.Size.Small}
-                weight={Text.Weight.Bold}
-            >
-                Name
-            </Text>
+        </Field>
+        <Field label="Name">
             <Text>{author}</Text>
-        </Box>
-        <div>
-            <Text
-                color={Text.Color.Secondary}
-                el={Text.Element.Label}
-                size={Text.Size.Small}
-                weight={Text.Weight.Bold}
-            >
-                Website
-            </Text>
+        </Field>
+        <Field label="Website">
             <Text>
                 <a href={website}>{website}</a>
             </Text>
-        </div>
-        <div>
-            <Text
-                color={Text.Color.Secondary}
-                el={Text.Element.Label}
-                size={Text.Size.Small}
-                weight={Text.Weight.Bold}
-            >
-                E-Mail
-            </Text>
+        </Field>
+        <Field label="E-Mail">
             <Text>
                 <a href={`mailto:${email}`}>{email}</a>
             </Text>
-        </div>
-        <div>
-            <Text
-                color={Text.Color.Secondary}
-                el={Text.Element.Label}
-                size={Text.Size.Small}
-                weight={Text.Weight.Bold}
-            >
-                Networks
-            </Text>
+        </Field>
+        <Field label="Networks">
             <span>
                 {networks.map(network => (
                     <Text key={network.url}>
@@ -89,53 +48,21 @@ const IndexPage = ({
                     </Text>
                 ))}
             </span>
-        </div>
-        <div>
-            <Text
-                color={Text.Color.Secondary}
-                el={Text.Element.Label}
-                size={Text.Size.Small}
-                weight={Text.Weight.Bold}
-            >
-                Location
-            </Text>
+        </Field>
+        <Field label="Location">
             <Text>{location}</Text>
-        </div>
-        <div>
-            <Text
-                color={Text.Color.Secondary}
-                el={Text.Element.Label}
-                size={Text.Size.Small}
-                weight={Text.Weight.Bold}
-            >
-                Occupation
-            </Text>
+        </Field>
+        <Field label="Occupation">
             <Text>{occupation}</Text>
-        </div>
-        <div>
-            <Text
-                color={Text.Color.Secondary}
-                el={Text.Element.Label}
-                size={Text.Size.Small}
-                weight={Text.Weight.Bold}
-            >
-                Interests
-            </Text>
+        </Field>
+        <Field label="Interests">
             <span>
                 {interests.map(interest => (
                     <Text key={interest}>{interest}</Text>
                 ))}
             </span>
-        </div>
-        <div>
-            <Text
-                color={Text.Color.Secondary}
-                el={Text.Element.Label}
-                size={Text.Size.Small}
-                weight={Text.Weight.Bold}
-            >
-                People
-            </Text>
+        </Field>
+        <Field label="People">
             <span>
                 {people.map(person => (
                     <Text key={person.url}>
@@ -144,8 +71,8 @@ const IndexPage = ({
                     </Text>
                 ))}
             </span>
-        </div>
-    </Layout>
+        </Field>
+    </>
 )
 
 export const query = graphql`

@@ -6,6 +6,7 @@ import * as _Element from 'src/theme/types/element'
 import * as _Typography from 'src/theme/types/typography'
 
 interface Props {
+    align?: _Typography.Align
     children: ReactNode
     color?: _Color.Palette
     el?: _Element.Text
@@ -22,12 +23,14 @@ export type StyledProps = Pick<Props, Exclude<keyof Props, 'el' | 'color'>> & {
 
 const StyledDiv = styled('div')<StyledProps>(({ theme, ...props }) => ({
     color: theme.colors[props.textColor],
+    cursor: 'text',
     fontFamily: theme.fonts[props.font],
     fontSize: theme.fontSizes[props.size],
     fontWeight: theme.fontWeights[props.weight],
     lineHeight: theme.lineHeights[props.lineHeight],
     marginBottom: props.noMargin ? 0 : null,
     marginTop: props.noMargin ? 0 : null,
+    textAlign: props.align,
 }))
 
 const Text = ({

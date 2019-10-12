@@ -106,10 +106,10 @@ export const getPadding = ({
     px,
     py,
 }: PaddingProps) =>
-    _responsiveLayout('padding', theme, p, pt, pr, pl, pb, px, py)
+    _responsiveLayout('padding', theme, p, pt, pr, pl, pb, py, px)
 
 export const getMargin = ({ theme, m, mt, mr, ml, mb, mx, my }: MarginProps) =>
-    _responsiveLayout('margin', theme, m, mt, mr, ml, mb, mx, my)
+    _responsiveLayout('margin', theme, m, mt, mr, ml, mb, my, mx)
 
 const _borderInnerValue = (
     theme: DefaultTheme,
