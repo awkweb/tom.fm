@@ -4,6 +4,8 @@ import { graphql } from 'gatsby'
 import Layout from 'src/components/layout'
 import Head from 'src/components/head'
 import Image from 'src/components/image'
+import Text from 'src/components/text'
+import Box from 'src/components/Box'
 
 const IndexPage = ({
     data: {
@@ -23,78 +25,123 @@ const IndexPage = ({
 }) => (
     <Layout>
         <Head title="Home" />
-        <div>
-            <small>
-                <b>Image</b>
-            </small>
+        <Box display={Box.Display.Flex} mb={{ sm: 10, lg: 0 }}>
+            <Text
+                color={Text.Color.Secondary}
+                el={Text.Element.Label}
+                size={Text.Size.Small}
+                weight={Text.Weight.Bold}
+            >
+                Image
+            </Text>
             <Image />
-        </div>
+        </Box>
+        <Box display={Box.Display.Flex}>
+            <Text
+                color={Text.Color.Secondary}
+                el={Text.Element.Label}
+                size={Text.Size.Small}
+                weight={Text.Weight.Bold}
+            >
+                Name
+            </Text>
+            <Text>{author}</Text>
+        </Box>
         <div>
-            <small>
-                <b>Name</b>
-            </small>
-            <span>{author}</span>
-        </div>
-        <div>
-            <small>
-                <b>Website</b>
-            </small>
-            <span>
+            <Text
+                color={Text.Color.Secondary}
+                el={Text.Element.Label}
+                size={Text.Size.Small}
+                weight={Text.Weight.Bold}
+            >
+                Website
+            </Text>
+            <Text>
                 <a href={website}>{website}</a>
-            </span>
+            </Text>
         </div>
         <div>
-            <small>
-                <b>E-Mail</b>
-            </small>
-            <span>
+            <Text
+                color={Text.Color.Secondary}
+                el={Text.Element.Label}
+                size={Text.Size.Small}
+                weight={Text.Weight.Bold}
+            >
+                E-Mail
+            </Text>
+            <Text>
                 <a href={`mailto:${email}`}>{email}</a>
-            </span>
+            </Text>
         </div>
         <div>
-            <small>
-                <b>Networks</b>
-            </small>
+            <Text
+                color={Text.Color.Secondary}
+                el={Text.Element.Label}
+                size={Text.Size.Small}
+                weight={Text.Weight.Bold}
+            >
+                Networks
+            </Text>
             <span>
                 {networks.map(network => (
-                    <div key={network.url}>
+                    <Text key={network.url}>
                         <a href={network.url}>{network.name}</a>
-                    </div>
+                    </Text>
                 ))}
             </span>
         </div>
         <div>
-            <small>
-                <b>Location</b>
-            </small>
-            <span>{location}</span>
+            <Text
+                color={Text.Color.Secondary}
+                el={Text.Element.Label}
+                size={Text.Size.Small}
+                weight={Text.Weight.Bold}
+            >
+                Location
+            </Text>
+            <Text>{location}</Text>
         </div>
         <div>
-            <small>
-                <b>Occupation</b>
-            </small>
-            <span>{occupation}</span>
+            <Text
+                color={Text.Color.Secondary}
+                el={Text.Element.Label}
+                size={Text.Size.Small}
+                weight={Text.Weight.Bold}
+            >
+                Occupation
+            </Text>
+            <Text>{occupation}</Text>
         </div>
         <div>
-            <small>
-                <b>Interests</b>
-            </small>
+            <Text
+                color={Text.Color.Secondary}
+                el={Text.Element.Label}
+                size={Text.Size.Small}
+                weight={Text.Weight.Bold}
+            >
+                Interests
+            </Text>
             <span>
                 {interests.map(interest => (
-                    <div key={interest}>{interest}</div>
+                    <Text key={interest}>{interest}</Text>
                 ))}
             </span>
         </div>
         <div>
-            <small>
-                <b>People</b>
-            </small>
+            <Text
+                color={Text.Color.Secondary}
+                el={Text.Element.Label}
+                size={Text.Size.Small}
+                weight={Text.Weight.Bold}
+            >
+                People
+            </Text>
             <span>
                 {people.map(person => (
-                    <div key={person.url}>
+                    <Text key={person.url}>
                         <a href={person.url}>{person.name}</a>
                         {person.starred ? `*` : ``}
-                    </div>
+                    </Text>
                 ))}
             </span>
         </div>

@@ -6,7 +6,8 @@ const GlobalStyle = createGlobalStyle`
         textShadow: none;
     }
     html {
-        fontSize: ${props => props.theme.fontSizes.body};
+        -webkit-text-size-adjust: 100%;
+        font-size: ${props => props.theme.fontSizes.root};
     }
     body {
         -webkit-font-smoothing: antialiased;
@@ -14,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
         color: ${props => props.theme.colors.text};
         font-family: ${props => props.theme.fonts.body};
         line-height: ${props => props.theme.lineHeights.body};
-        min-height: ${props => props.theme.sizes.pageheight};
+        min-height: 100vh;
         text-rendering: optimizeLegibility;
     }
     a {

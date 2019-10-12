@@ -1,3 +1,9 @@
+export enum Align {
+    Left = 'left',
+    Center = 'center',
+    Right = 'right',
+}
+
 export enum Font {
     Body = 'body',
     Heading = 'heading',
@@ -10,9 +16,10 @@ export enum LineHeight {
 }
 
 export enum Size {
-    Small = 'small',
     Body = 'body',
     Heading = 'heading',
+    Root = 'root',
+    Small = 'small',
 }
 
 export enum Weight {

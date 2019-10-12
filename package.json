@@ -28,6 +28,8 @@
     "dependencies": {
         "gatsby": "2.15.36",
         "gatsby-image": "2.2.27",
+        "lodash.kebabcase": "^4.1.1",
+        "lodash.mapvalues": "^4.6.0",
         "react": "16.10.2",
         "react-dom": "16.10.2",
         "react-helmet": "5.2.1",
@@ -36,9 +38,12 @@
         "typeface-inter": "3.10.0"
     },
     "devDependencies": {
+        "@types/lodash.kebabcase": "^4.1.6",
+        "@types/lodash.mapvalues": "^4.6.6",
         "@types/styled-components": "^4.1.19",
         "@typescript-eslint/eslint-plugin": "2.3.3",
         "@typescript-eslint/parser": "2.3.3",
+        "babel-plugin-styled-components": "^1.10.6",
         "eslint": "6.5.1",
         "eslint-config-prettier": "6.4.0",
         "eslint-plugin-import": "2.18.2",
@@ -49,6 +54,7 @@
         "eslint-plugin-react-hooks": "2.1.2",
         "gatsby-plugin-react-helmet": "3.1.11",
         "gatsby-plugin-sharp": "2.2.29",
+        "gatsby-plugin-styled-components": "^3.1.9",
         "gatsby-plugin-typescript": "2.1.12",
         "gatsby-source-filesystem": "2.1.31",
         "gatsby-transformer-sharp": "2.2.21",

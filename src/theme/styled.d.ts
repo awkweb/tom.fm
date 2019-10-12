@@ -3,9 +3,8 @@ import 'styled-components'
 import * as _Border from './types/border'
 import * as _Color from './types/color'
 import * as _Position from './types/position'
-import * as _Responsive from './types/responsive'
-import * as _Size from './types/size'
 import * as _Typography from './types/typography'
+import { Responsive } from './utilities/responsive'
 
 declare module 'styled-components' {
     export interface DefaultTheme {
@@ -16,14 +15,6 @@ declare module 'styled-components' {
         borderWidths: {
             [_Border.Width.Normal]: string
         }
-        breakpoints:
-            | string[]
-            | {
-                  [_Responsive.Breakpoint.Sm]: string
-                  [_Responsive.Breakpoint.Md]: string
-                  [_Responsive.Breakpoint.Lg]: string
-                  [_Responsive.Breakpoint.Xl]: string
-              }
         colors: {
             [_Color.Palette.Accent]: string
             [_Color.Palette.Background]: string
@@ -41,6 +32,7 @@ declare module 'styled-components' {
         fontSizes: {
             [_Typography.Size.Heading]: string
             [_Typography.Size.Body]: string
+            [_Typography.Size.Root]: string
             [_Typography.Size.Small]: string
         }
         fontWeights: {
@@ -54,12 +46,7 @@ declare module 'styled-components' {
         radii: {
             [_Border.Radius.None]: number
         }
-        sizes: {
-            [_Size.Size.HomeWidth]: string
-            [_Size.Size.PostWidth]: string
-            [_Size.Size.PageHeight]: string
-            [_Size.Size.PageWidth]: string
-        }
+        responsive: Responsive
         space: string[]
         zIndices: number[]
     }

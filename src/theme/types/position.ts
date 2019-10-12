@@ -1,3 +1,8 @@
+export enum Position {
+    Relative = 'relative',
+    Absolute = 'absolute',
+}
+
 export enum ZIndex {
     Lowest = -100,
     Zero = 0,
