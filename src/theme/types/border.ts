@@ -9,4 +9,5 @@ export enum Style {
 
 export enum Width {
     Normal = 'normal',
+    Thick = 'thick',
 }

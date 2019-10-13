@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${props => props.theme.colors.background};
         color: ${props => props.theme.colors.text};
         font-family: ${props => props.theme.fonts.body};
-        font-feature-settings: 'calt' on, 'liga' on;
+        font-feature-settings: 'calt' on, 'liga' on, 'zero' on;
         line-height: ${props => props.theme.lineHeights.body};
         min-height: 100vh;
         text-rendering: optimizeLegibility;

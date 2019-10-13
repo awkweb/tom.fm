@@ -10,29 +10,30 @@ import { DEFAULT_PIXEL_SIZE, toRemString } from './utilities/units'
 import { Responsive } from './utilities/responsive'
 
 const borderStyles = {
-    [_Border.Style.None]: `none`,
-    [_Border.Style.Solid]: `solid`,
+    [_Border.Style.None]: 'none',
+    [_Border.Style.Solid]: 'solid',
 }
 
 const borderWidths = {
-    [_Border.Width.Normal]: `1px`,
+    [_Border.Width.Normal]: '1px',
+    [_Border.Width.Thick]: '5px',
 }
 
 const colors = {
-    [_Color.Palette.Accent]: ``,
-    [_Color.Palette.Background]: `hsl(240, 0%, 98%)`,
-    [_Color.Palette.Field]: `hsl(240, 0%, 100%)`,
-    [_Color.Palette.Muted]: `hsl(240, 0%, 60%)`,
-    [_Color.Palette.Primary]: `hsl(240, 100%, 50%)`,
-    [_Color.Palette.Secondary]: `hsl(240, 0%, 35%)`,
-    [_Color.Palette.Selection]: `hsl(240, 0%, 68%)`,
-    [_Color.Palette.Text]: `hsl(240, 0%, 5%)`,
+    [_Color.Palette.Accent]: 'hsl(193, 100%, 50%)',
+    [_Color.Palette.Background]: 'hsl(0, 0%, 0%)',
+    [_Color.Palette.Field]: 'hsl(0, 0%, 0%)',
+    [_Color.Palette.Muted]: 'hsl(109, 0%, 60%)',
+    [_Color.Palette.Primary]: 'hsl(304, 99%, 50%)',
+    [_Color.Palette.Secondary]: 'hsl(109, 0%, 50%)',
+    [_Color.Palette.Selection]: 'hsl(109, 0%, 15%)',
+    [_Color.Palette.Text]: 'hsl(109, 0%, 95%)',
 }
 
 const fonts = {
-    [_Typography.Font.Body]: `Inter, sans-serif`,
-    [_Typography.Font.Heading]: `Inter, sans-serif`,
-    [_Typography.Font.Monospace]: `Fira Code, monospace`,
+    [_Typography.Font.Body]: 'Inter, sans-serif',
+    [_Typography.Font.Heading]: 'Inter, sans-serif',
+    [_Typography.Font.Monospace]: 'Fira Code, monospace',
 }
 const fontSizes = {
     [_Typography.Size.Body]: toRemString(16),

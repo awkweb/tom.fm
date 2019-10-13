@@ -14,6 +14,7 @@ declare module 'styled-components' {
         }
         borderWidths: {
             [_Border.Width.Normal]: string
+            [_Border.Width.Thick]: string
         }
         colors: {
             [_Color.Palette.Accent]: string

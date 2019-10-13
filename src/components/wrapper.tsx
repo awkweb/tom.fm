@@ -16,7 +16,8 @@ const Wrapper = ({ element }: Props) => (
             <GlobalStyles />
             <Box
                 el={Box.Element.Main}
-                mt={{ sm: 6, lg: 8 }}
+                pb={{ sm: 8, lg: 10 }}
+                pt={{ sm: 6, lg: 8 }}
                 px={{ sm: 6, lg: 8 }}
             >
                 {element}

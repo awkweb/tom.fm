@@ -118,7 +118,7 @@ const _borderInnerValue = (
     borderStyle: string,
 ) => (border: boolean) => {
     if (border && typeof border === 'boolean') {
-        return `${borderStyle} ${borderWidth ||
+        return `${borderStyle} ${theme.borderWidths[borderWidth] ||
             theme.borderWidths.normal} ${String(
             theme.colors[borderColor] || borderColor,
         )}`

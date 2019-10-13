@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
+import Box from './Box'
+
 const Image = () => {
     const data = useStaticQuery(graphql`
         query {
@@ -16,11 +18,22 @@ const Image = () => {
     `)
 
     return (
-        <Img
-            fadeIn={false}
-            fluid={data.placeholderImage.childImageSharp.fluid}
-            style={{ width: 85 }}
-        />
+        <Box
+            css={`
+                img {
+                    filter: grayscale(50%);
+                }
+                img:hover {
+                    filter: none;
+                }
+            `}
+        >
+            <Img
+                fadeIn={false}
+                fluid={data.placeholderImage.childImageSharp.fluid}
+                style={{ width: 55 }}
+            />
+        </Box>
     )
 }
 

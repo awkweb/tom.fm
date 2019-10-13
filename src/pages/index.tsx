@@ -24,8 +24,8 @@ const IndexPage = ({
     },
 }) => (
     <>
-        <Head title="Home" />
-        <Field label="Image" noBorder>
+        <Head title="Welcome Home" />
+        <Field label="Avatar" noBorder>
             <Image />
         </Field>
         <Field label="Name">

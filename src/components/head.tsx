@@ -2,90 +2,50 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
 
+const query = graphql`
+    query {
+        site {
+            siteMetadata {
+                title
+                description
+                username
+            }
+        }
+    }
+`
+
+const useMetadata = () => {
+    const data = useStaticQuery(query)
+    return data.site.siteMetadata
+}
+
 interface Props {
     description?: string
-    lang?: string
     keywords?: []
-    meta?: []
     title: string
 }
 
-const Head = ({ description, lang, meta, keywords, title }: Props) => {
-    const { site } = useStaticQuery(
-        graphql`
-            query {
-                site {
-                    siteMetadata {
-                        title
-                        description
-                        author
-                    }
-                }
-            }
-        `,
-    )
-
-    const metaDescription = description || site.siteMetadata.description
+const Head = ({ title, description = '', keywords = [] }: Props) => {
+    const meta = useMetadata()
+    const d = description || meta.description
+    const titleTemplate = `${meta.title} *** %s`
 
     return (
-        <Helmet
-            htmlAttributes={{
-                lang,
-            }}
-            meta={[
-                {
-                    name: `description`,
-                    content: metaDescription,
-                },
-                {
-                    property: `og:title`,
-                    content: title,
-                },
-                {
-                    property: `og:description`,
-                    content: metaDescription,
-                },
-                {
-                    property: `og:type`,
-                    content: `website`,
-                },
-                {
-                    name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: site.siteMetadata.author,
-                },
-                {
-                    name: `twitter:title`,
-                    content: title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: metaDescription,
-                },
-            ]
-                .concat(
-                    keywords.length > 0
-                        ? {
-                              name: `keywords`,
-                              content: keywords.join(`, `),
-                          }
-                        : [],
-                )
-                .concat(meta)}
-            title={title}
-            titleTemplate={`${site.siteMetadata.title} — %s`}
-        />
+        <Helmet lang="en" titleTemplate={titleTemplate}>
+            <title>{title}</title>
+            <meta content={d} name="description" />
+            <meta content={title} name="og:title" />
+            <meta content={d} name="og:description" />
+            <meta content="website" name="og:type" />
+            <meta content="summary" name="twitter:card" />
+            <meta content={title} name="twitter:title" />
+            <meta content={d} name="twitter:description" />
+            <meta content={meta.username} name="twitter:creator" />
+            {keywords.length && (
+                <meta content={keywords.join(`, `)} name="keywords" />
+            )}
+        </Helmet>
     )
-}
-
-Head.defaultProps = {
-    lang: `en`,
-    meta: [],
-    keywords: [],
-    description: ``,
 }
 
 export default Head

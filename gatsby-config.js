@@ -1,8 +1,9 @@
 module.exports = {
     siteMetadata: {
         title: `tom.fm`,
-        description: `Tom Meagher is a software engineer in New York City.`,
+        description: `Tom Meagher is a Internet Explorer in New York City.`,
         author: `Tom Meagher`,
+        username: `tomfme`,
         website: `tom.fm`,
         email: `tom@meagher.co`,
         networks: [
