@@ -10,13 +10,14 @@ interface Props {
 }
 
 const Field = ({ children, label, noBorder }: Props) => (
-    <Box display={{ lg: Box.Display.Flex }} mb={3}>
+    <Box display={{ lg: Box.Display.Flex }} mb={4}>
         <Box
             css={`
                 max-width: 6rem;
             `}
             fluidWidth
-            mr={5}
+            mb={{ sm: 1, lg: 0 }}
+            mr={{ lg: 5 }}
             p={{ lg: 2 }}
             textAlign={{ lg: Text.Align.Right }}
         >
@@ -31,11 +32,12 @@ const Field = ({ children, label, noBorder }: Props) => (
         </Box>
         <Box
             b={!noBorder}
+            background={!noBorder && Box.Background.Field}
             css={`
                 max-width: 21.875rem;
             `}
-            fluidWidth
-            p={noBorder ? 0 : 2}
+            fluidWidth={!noBorder}
+            p={!noBorder && 2}
         >
             {children}
         </Box>

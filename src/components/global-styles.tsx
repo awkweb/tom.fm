@@ -14,19 +14,33 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${props => props.theme.colors.background};
         color: ${props => props.theme.colors.text};
         font-family: ${props => props.theme.fonts.body};
+        font-feature-settings: 'calt' on, 'liga' on;
         line-height: ${props => props.theme.lineHeights.body};
         min-height: 100vh;
         text-rendering: optimizeLegibility;
     }
     a {
+        background-position: 0 95%;
+        background-image: linear-gradient(to bottom,
+            ${props => props.theme.colors.text} 50%,
+            ${props => props.theme.colors.text} 50%);
+        background-repeat: repeat-x;
+        background-size: 1px 1px;
         color: inherit;
         display: inline-block;
         position: relative;
         transition: color 0.15s;
+        text-decoration: none;
 
         &:hover {
+            background-image: linear-gradient(to bottom,
+                ${props => props.theme.colors.primary} 50%,
+                ${props => props.theme.colors.primary} 50%);
             color: ${props => props.theme.colors.primary};
         }
+    }
+    button {
+        cursor: pointer;
     }
     code {
         font-feature-settings: 'liga' on;

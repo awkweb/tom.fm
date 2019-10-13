@@ -17,7 +17,7 @@ const Wrapper = ({ element }: Props) => (
             <Box
                 el={Box.Element.Main}
                 mt={{ sm: 6, lg: 8 }}
-                px={{ sm: 6, lg: 10 }}
+                px={{ sm: 6, lg: 8 }}
             >
                 {element}
             </Box>

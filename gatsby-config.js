@@ -13,7 +13,7 @@ module.exports = {
         location: `New York City`,
         occupation: `Software Engineer`,
         interests: [
-            `Single purpose/use apps`,
+            `Single purpose or use apps`,
             `Teaching/helping others learn`,
             `Doing more things outside of tech`,
         ],

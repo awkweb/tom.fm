@@ -5,19 +5,20 @@ import Head from 'src/components/head'
 import Image from 'src/components/image'
 import Text from 'src/components/text'
 import Field from 'src/components/field'
+import VersionField from 'src/components/version-field'
+import EmailField from 'src/components/email-field'
+import Box from 'src/components/Box'
 
 const IndexPage = ({
     data: {
         site: {
             siteMetadata: {
                 author,
-                email,
                 interests,
                 location,
                 networks,
                 occupation,
                 people,
-                website,
             },
         },
     },
@@ -30,24 +31,14 @@ const IndexPage = ({
         <Field label="Name">
             <Text>{author}</Text>
         </Field>
-        <Field label="Website">
-            <Text>
-                <a href={website}>{website}</a>
-            </Text>
-        </Field>
-        <Field label="E-Mail">
-            <Text>
-                <a href={`mailto:${email}`}>{email}</a>
-            </Text>
-        </Field>
+        <VersionField />
+        <EmailField />
         <Field label="Networks">
-            <span>
-                {networks.map(network => (
-                    <Text key={network.url}>
-                        <a href={network.url}>{network.name}</a>
-                    </Text>
-                ))}
-            </span>
+            {networks.map(network => (
+                <Text key={network.url}>
+                    <a href={network.url}>{network.name}</a>
+                </Text>
+            ))}
         </Field>
         <Field label="Location">
             <Text>{location}</Text>
@@ -56,21 +47,21 @@ const IndexPage = ({
             <Text>{occupation}</Text>
         </Field>
         <Field label="Interests">
-            <span>
+            <Box el={Box.Element.Ul} my={0} pl={5}>
                 {interests.map(interest => (
-                    <Text key={interest}>{interest}</Text>
+                    <Box el={Box.Element.Li} key={interest}>
+                        <Text>{interest}</Text>
+                    </Box>
                 ))}
-            </span>
+            </Box>
         </Field>
         <Field label="People">
-            <span>
-                {people.map(person => (
-                    <Text key={person.url}>
-                        <a href={person.url}>{person.name}</a>
-                        {person.starred ? `*` : ``}
-                    </Text>
-                ))}
-            </span>
+            {people.map(person => (
+                <Text key={person.url}>
+                    <a href={person.url}>{person.name}</a>
+                    {person.starred && `*`}
+                </Text>
+            ))}
         </Field>
     </>
 )
@@ -81,8 +72,6 @@ export const query = graphql`
             siteMetadata {
                 description
                 author
-                website
-                email
                 networks {
                     name
                     url
