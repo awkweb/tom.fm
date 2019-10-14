@@ -28,17 +28,17 @@ interface Props {
 const Head = ({ title, description = '', keywords = [] }: Props) => {
     const meta = useMetadata()
     const d = description || meta.description
-    const titleTemplate = `${meta.title} *** %s`
+    const titleTemplate = `${meta.title} *** ${title}`
 
     return (
-        <Helmet lang="en" titleTemplate={titleTemplate}>
-            <title>{title}</title>
+        <Helmet lang="en">
+            <title>{titleTemplate}</title>
             <meta content={d} name="description" />
             <meta content={title} name="og:title" />
             <meta content={d} name="og:description" />
             <meta content="website" name="og:type" />
             <meta content="summary" name="twitter:card" />
-            <meta content={title} name="twitter:title" />
+            <meta content={titleTemplate} name="twitter:title" />
             <meta content={d} name="twitter:description" />
             <meta content={meta.username} name="twitter:creator" />
             {keywords.length && (

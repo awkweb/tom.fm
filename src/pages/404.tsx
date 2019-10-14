@@ -27,7 +27,8 @@ const NotFoundPage = ({
                 </Box>
                 <Box el={Box.Element.Li}>
                     <Text>
-                        Let me know about this on <a href={username}>Twitter</a>
+                        Let me know about this on{' '}
+                        <a href={`https://twitter.com/${username}`}>Twitter</a>
                     </Text>
                 </Box>
                 <Box el={Box.Element.Li}>
