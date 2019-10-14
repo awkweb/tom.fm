@@ -13,20 +13,6 @@ module.exports = {
         ],
         location: 'New York City',
         occupation: 'Software Engineer',
-        entities: [
-            {
-                name: 'Atty Eleti',
-                url: 'https://athyuttamre.com/',
-            },
-            {
-                name: 'John Palmer',
-                url: 'https://darkblueheaven.com',
-            },
-            {
-                name: 'Latika Sridhar',
-                url: 'https://patreon.com/latika',
-            },
-        ],
     },
     plugins: [
         'gatsby-plugin-typescript',

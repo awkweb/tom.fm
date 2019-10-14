@@ -12,14 +12,16 @@ import Box from 'src/components/Box'
 const IndexPage = ({
     data: {
         site: {
-            siteMetadata: { author, entities, location, networks, occupation },
+            siteMetadata: { author, location, networks, occupation },
         },
     },
 }) => (
     <>
         <Head title="Welcome Home" />
         <Field label="Avatar" noBorder>
-            <Image />
+            <Box b display={Box.Display.InlineBlock}>
+                <Image />
+            </Box>
         </Field>
         <Field label="Name">
             <Text>{author}</Text>
@@ -39,12 +41,8 @@ const IndexPage = ({
                 </Text>
             ))}
         </Field>
-        <Field label="Entities">
-            {entities.map(entity => (
-                <Text key={entity.url}>
-                    <a href={entity.url}>{entity.name}</a>
-                </Text>
-            ))}
+        <Field label="Writing">
+            <Text>Not ready for public consumption</Text>
         </Field>
     </>
 )
@@ -61,11 +59,6 @@ export const query = graphql`
                 }
                 location
                 occupation
-                entities {
-                    name
-                    starred
-                    url
-                }
             }
         }
     }

@@ -27,17 +27,11 @@ const NotFoundPage = ({
                 </Box>
                 <Box el={Box.Element.Li}>
                     <Text>
-                        Read my favorite{' '}
-                        <a href="https://frankchimero.com/writing/the-webs-grain/">
-                            essay
-                        </a>
+                        Let me know about this on <a href={username}>Twitter</a>
                     </Text>
                 </Box>
                 <Box el={Box.Element.Li}>
-                    <Text>
-                        Let me know about this on{' '}
-                        <a href={`https://twitter.com/${username}`}>Twitter</a>
-                    </Text>
+                    <Text>None of the above</Text>
                 </Box>
             </Box>
         </Field>
@@ -48,7 +42,10 @@ export const query = graphql`
     query NotFoundPageQuery {
         site {
             siteMetadata {
-                username
+                networks {
+                    name
+                    url
+                }
             }
         }
     }
