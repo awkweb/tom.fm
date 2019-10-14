@@ -37,7 +37,8 @@ const Field = ({ children, label, noBorder }: Props) => (
                 max-width: 21.875rem;
             `}
             fluidWidth={!noBorder}
-            p={!noBorder && 2}
+            px={!noBorder && 3}
+            py={!noBorder && 2}
         >
             {children}
         </Box>

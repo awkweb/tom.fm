@@ -22,11 +22,11 @@ const borderWidths = {
 const colors = {
     [_Color.Palette.Accent]: 'hsl(193, 100%, 50%)',
     [_Color.Palette.Background]: 'hsl(0, 0%, 0%)',
-    [_Color.Palette.Field]: 'hsl(0, 0%, 0%)',
+    [_Color.Palette.Field]: 'hsl(0, 0%, 2%)',
     [_Color.Palette.Muted]: 'hsl(109, 0%, 60%)',
     [_Color.Palette.Primary]: 'hsl(304, 99%, 50%)',
     [_Color.Palette.Secondary]: 'hsl(109, 0%, 50%)',
-    [_Color.Palette.Selection]: 'hsl(109, 0%, 15%)',
+    [_Color.Palette.Selection]: 'hsl(304, 50%, 35%)',
     [_Color.Palette.Text]: 'hsl(109, 0%, 95%)',
 }
 

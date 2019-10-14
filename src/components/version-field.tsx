@@ -6,7 +6,7 @@ import Field from './field'
 import Box from './Box'
 
 const VersionField = () => {
-    const [version, setVersion] = useState('')
+    const [version, setVersion] = useState('26.288.204017')
 
     useInterval(() => {
         const now = new Date()

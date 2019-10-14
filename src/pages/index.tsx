@@ -12,14 +12,7 @@ import Box from 'src/components/Box'
 const IndexPage = ({
     data: {
         site: {
-            siteMetadata: {
-                author,
-                interests,
-                location,
-                networks,
-                occupation,
-                people,
-            },
+            siteMetadata: { author, entities, location, networks, occupation },
         },
     },
 }) => (
@@ -32,6 +25,12 @@ const IndexPage = ({
             <Text>{author}</Text>
         </Field>
         <VersionField />
+        <Field label="Location">
+            <Text>{location}</Text>
+        </Field>
+        <Field label="Occupation">
+            <Text>{occupation}</Text>
+        </Field>
         <EmailField />
         <Field label="Networks">
             {networks.map(network => (
@@ -40,26 +39,10 @@ const IndexPage = ({
                 </Text>
             ))}
         </Field>
-        <Field label="Location">
-            <Text>{location}</Text>
-        </Field>
-        <Field label="Occupation">
-            <Text>{occupation}</Text>
-        </Field>
-        <Field label="Interests">
-            <Box el={Box.Element.Ul} my={0} pl={5}>
-                {interests.map(interest => (
-                    <Box el={Box.Element.Li} key={interest}>
-                        <Text>{interest}</Text>
-                    </Box>
-                ))}
-            </Box>
-        </Field>
-        <Field label="People">
-            {people.map(person => (
-                <Text key={person.url}>
-                    <a href={person.url}>{person.name}</a>
-                    {person.starred && `*`}
+        <Field label="Entities">
+            {entities.map(entity => (
+                <Text key={entity.url}>
+                    <a href={entity.url}>{entity.name}</a>
                 </Text>
             ))}
         </Field>
@@ -78,8 +61,7 @@ export const query = graphql`
                 }
                 location
                 occupation
-                interests
-                people {
+                entities {
                     name
                     starred
                     url
