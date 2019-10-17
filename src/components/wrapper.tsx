@@ -29,7 +29,7 @@ const Wrapper = ({ element }: Props) => (
                     `}
                     el={Box.Element.Main}
                     pt={5}
-                    px={5}
+                    px={{ sm: 3, lg: 5 }}
                 >
                     {element}
                 </Box>

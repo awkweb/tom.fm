@@ -98,7 +98,8 @@ const GlobalStyle = createGlobalStyle`
     }
 
     figure {
-        margin: 0;
+        margin: ${props => props.theme.space[7]} 0 ${props =>
+    props.theme.space[6]};
 
         img,
         .gatsby-resp-image-background-image {

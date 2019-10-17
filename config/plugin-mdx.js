@@ -2,6 +2,9 @@ module.exports = {
     extensions: ['.mdx', '.md'],
     gatsbyRemarkPlugins: [
         {
+            resolve: 'gatsby-remark-unwrap-images',
+        },
+        {
             resolve: 'gatsby-remark-images',
             options: {
                 maxWidth: 600,
@@ -21,5 +24,5 @@ module.exports = {
             resolve: 'gatsby-remark-smartypants',
         },
     ],
-    plugins: ['gatsby-remark-images'],
+    plugins: ['gatsby-remark-unwrap-images', 'gatsby-remark-images'],
 }

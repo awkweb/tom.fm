@@ -4,16 +4,33 @@ import Head from 'src/components/head'
 import Post from 'src/components/post'
 
 interface Props {
-    children: ReactNode
+    author: string
     date: string
+    description: string
+    children: ReactNode
+    entry: string
     permalink: string
     title: string
 }
 
-const Layout = ({ date, children, permalink, title }: Props) => (
+const Layout = ({
+    author,
+    children,
+    date,
+    description,
+    entry,
+    permalink,
+    title,
+}: Props) => (
     <>
-        <Head title={title} />
-        <Post date={date} permalink={permalink} title={title}>
+        <Head description={description} title={title} />
+        <Post
+            author={author}
+            date={date}
+            entry={entry}
+            permalink={permalink}
+            title={title}
+        >
             {children}
         </Post>
     </>

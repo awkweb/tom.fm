@@ -6,13 +6,15 @@ import Box from './Box'
 import Text from './Text'
 
 interface Props {
-    date: string
+    author: string
     children: ReactNode
+    date: string
+    entry: string
     permalink: string
     title: string
 }
 
-const Post = ({ date, children, permalink, title }: Props) => {
+const Post = ({ author, children, date, entry, permalink, title }: Props) => {
     return (
         <Box bb el={Box.Element.Article} mb={5}>
             <Box mb={7}>
@@ -30,19 +32,17 @@ const Post = ({ date, children, permalink, title }: Props) => {
                     display={Box.Display.Flex}
                 >
                     <Text color={Text.Color.Secondary} size={Text.Size.Small}>
-                        Tom Meagher
+                        {author}&nbsp;&nbsp;×&nbsp;&nbsp;
                     </Text>
-                    <Text>&nbsp;&nbsp;×&nbsp;&nbsp;</Text>
                     <Text
                         color={Text.Color.Secondary}
                         el={Text.Element.Time}
                         size={Text.Size.Small}
                     >
-                        {date}
+                        {date}&nbsp;&nbsp;×&nbsp;&nbsp;
                     </Text>
-                    <Text>&nbsp;&nbsp;×&nbsp;&nbsp;</Text>
                     <Text color={Text.Color.Secondary} size={Text.Size.Small}>
-                        Entry 002
+                        Entry {entry}
                     </Text>
                 </Box>
             </Box>

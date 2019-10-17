@@ -53,9 +53,9 @@ exports.createPages = async ({ graphql, actions }) => {
             path: permalink,
             component,
             context: {
+                next,
                 permalink,
                 previous,
-                next,
             },
         })
     })
