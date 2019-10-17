@@ -17,6 +17,7 @@ export enum Box {
 }
 
 export enum Text {
+    Blockquote = 'blockquote',
     Code = 'code',
     Div = 'div',
     H1 = 'h1',

@@ -6,6 +6,11 @@ import theme from 'src/theme'
 
 import GlobalStyles from './global-styles'
 import Box from './Box'
+import Blockquote from './blockquote'
+
+const components = {
+    blockquote: Blockquote,
+}
 
 interface Props {
     element: ReactNode
@@ -15,7 +20,7 @@ const Wrapper = ({ element }: Props) => (
     <ThemeProvider theme={theme}>
         <>
             <GlobalStyles />
-            <MDXProvider>
+            <MDXProvider components={components}>
                 <Box
                     css={`
                         max-width: 40rem;
@@ -23,6 +28,7 @@ const Wrapper = ({ element }: Props) => (
                         margin-right: auto;
                     `}
                     el={Box.Element.Main}
+                    px={5}
                 >
                     {element}
                 </Box>

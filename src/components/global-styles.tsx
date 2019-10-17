@@ -5,10 +5,12 @@ const GlobalStyle = createGlobalStyle`
         background: ${props => props.theme.colors.selection};
         textShadow: none;
     }
+
     html {
         -webkit-text-size-adjust: 100%;
         font-size: ${props => props.theme.fontSizes.root};
     }
+
     body {
         -webkit-font-smoothing: antialiased;
         background-color: ${props => props.theme.colors.background};
@@ -19,33 +21,51 @@ const GlobalStyle = createGlobalStyle`
         min-height: 100vh;
         text-rendering: optimizeLegibility;
     }
-    a {
-        background-position: 0 95%;
-        background-image: linear-gradient(to bottom,
-            ${props => props.theme.colors.text} 50%,
-            ${props => props.theme.colors.text} 50%);
-        background-repeat: repeat-x;
-        background-size: 1px 1px;
-        color: inherit;
-        display: inline-block;
-        position: relative;
-        transition: color 0.15s;
-        text-decoration: none;
 
-        &:hover {
-            background-image: linear-gradient(to bottom,
-                ${props => props.theme.colors.primary} 50%,
-                ${props => props.theme.colors.primary} 50%);
-            color: ${props => props.theme.colors.primary};
-        }
+    p {
+        margin-bottom: ${props => props.theme.space[5]};
+        margin-top: ${props => props.theme.space[5]};
     }
-    button {
-        cursor: pointer;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: ${props => props.theme.space[5]};
+        margin-top: ${props => props.theme.space[8]};
     }
+
+    hr {
+        border-top: none;
+        border-bottom-color: ${props => props.theme.colors.muted};
+        border-bottom-style: ${props => props.theme.borderStyles.solid};
+        border-bottom-width: ${props => props.theme.borderWidths.normal};
+        margin-bottom: ${props => props.theme.space[5]};
+        margin-top: ${props => props.theme.space[5]};
+    }
+
+    ul,
+    ol {
+        margin-bottom: ${props => props.theme.space[5]};
+        margin-left: ${props => props.theme.space[3]};
+        margin-top: ${props => props.theme.space[5]};
+        padding-left: ${props => props.theme.space[3]};
+    }
+
+    pre {
+        margin-bottom: ${props => props.theme.space[5]};
+        margin-left: ${props => props.theme.space[3]};
+        margin-top: ${props => props.theme.space[5]};
+    }
+
     code {
+        font-family: ${props => props.theme.fonts.monospace};
         font-feature-settings: 'liga' on;
-        font-size: 95%;
+        font-size: 95% !important;
     }
+
     sup {
         font-feature-settings: 'sups' on;
         vertical-align: initial;

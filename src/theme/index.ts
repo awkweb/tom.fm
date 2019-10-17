@@ -35,7 +35,7 @@ const fonts = {
     [_Typography.Font.Monospace]: 'Fira Code, monospace',
 }
 const fontSizes = {
-    [_Typography.Size.Body]: toRemString(16),
+    [_Typography.Size.Body]: toRemString(DEFAULT_PIXEL_SIZE),
     [_Typography.Size.Heading]: toRemString(24),
     [_Typography.Size.Root]: `${DEFAULT_PIXEL_SIZE}px`,
     [_Typography.Size.Small]: toRemString(14),
@@ -46,8 +46,8 @@ const fontWeights = {
     [_Typography.Weight.Normal]: 400,
 }
 const lineHeights = {
-    [_Typography.LineHeight.Body]: toRemString(22),
-    [_Typography.LineHeight.Heading]: toRemString(25),
+    [_Typography.LineHeight.Body]: toRemString(25),
+    [_Typography.LineHeight.Heading]: toRemString(28),
 }
 
 const radii = {
