@@ -28,6 +28,7 @@ const Wrapper = ({ element }: Props) => (
                         margin-right: auto;
                     `}
                     el={Box.Element.Main}
+                    pt={5}
                     px={5}
                 >
                     {element}

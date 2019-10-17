@@ -48,6 +48,7 @@ declare module 'styled-components' {
         radii: {
             [_Border.Radius.None]: number
             [_Border.Radius.Small]: string
+            [_Border.Radius.Large]: string
         }
         responsive: Responsive
         space: string[]

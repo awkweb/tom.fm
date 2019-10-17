@@ -22,11 +22,11 @@ const borderWidths = {
 const colors = {
     [_Color.Palette.Accent]: 'red',
     [_Color.Palette.Background]: 'hsl(104, 100%, 100%)',
-    [_Color.Palette.Muted]: 'hsl(109, 0%, 70%)',
+    [_Color.Palette.Muted]: 'hsl(109, 0%, 80%)',
     [_Color.Palette.Primary]: 'hsl(240, 100%, 50%)',
     [_Color.Palette.Secondary]: 'hsl(109, 0%, 25%)',
-    [_Color.Palette.Selection]: 'hsl(240, 21%, 68%)',
-    [_Color.Palette.Text]: 'hsl(109, 0%, 10%)',
+    [_Color.Palette.Selection]: 'hsl(109, 0%, 85%)',
+    [_Color.Palette.Text]: 'hsl(109, 0%, 15%)',
 }
 
 const fonts = {
@@ -47,12 +47,13 @@ const fontWeights = {
 }
 const lineHeights = {
     [_Typography.LineHeight.Body]: toRemString(26),
-    [_Typography.LineHeight.Heading]: toRemString(28),
+    [_Typography.LineHeight.Heading]: toRemString(30),
 }
 
 const radii = {
     [_Border.Radius.None]: 0,
     [_Border.Radius.Small]: '2px',
+    [_Border.Radius.Large]: '4px',
 }
 
 const space = [

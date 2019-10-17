@@ -29,7 +29,6 @@
         "@mdx-js/mdx": "^1.5.1",
         "@mdx-js/react": "^1.5.1",
         "gatsby": "2.15.36",
-        "gatsby-image": "2.2.27",
         "lodash.kebabcase": "^4.1.1",
         "lodash.mapvalues": "^4.6.0",
         "react": "16.10.2",
