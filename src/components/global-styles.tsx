@@ -53,9 +53,6 @@ const GlobalStyle = createGlobalStyle`
             display: none;
         }
     }
-    small {
-        fontSize: ${props => props.theme.fontSizes.small};
-    }
 `
 
 export default GlobalStyle

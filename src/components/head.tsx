@@ -8,7 +8,6 @@ const query = graphql`
             siteMetadata {
                 title
                 description
-                username
             }
         }
     }
@@ -22,25 +21,25 @@ const useMetadata = () => {
 interface Props {
     description?: string
     keywords?: []
-    title: string
+    title?: string
 }
 
 const Head = ({ title, description = '', keywords = [] }: Props) => {
     const meta = useMetadata()
     const d = description || meta.description
-    const titleTemplate = `${meta.title} *** ${title}`
+    const t = title || meta.title
 
     return (
         <Helmet lang="en">
-            <title>{titleTemplate}</title>
+            <title>{t}</title>
             <meta content={d} name="description" />
-            <meta content={title} name="og:title" />
+            <meta content={t} name="og:title" />
             <meta content={d} name="og:description" />
             <meta content="website" name="og:type" />
             <meta content="summary" name="twitter:card" />
-            <meta content={titleTemplate} name="twitter:title" />
+            <meta content={t} name="twitter:title" />
             <meta content={d} name="twitter:description" />
-            <meta content={meta.username} name="twitter:creator" />
+            <meta content="tomfme" name="twitter:creator" />
             {keywords.length && (
                 <meta content={keywords.join(`, `)} name="keywords" />
             )}

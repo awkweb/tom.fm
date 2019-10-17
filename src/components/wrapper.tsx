@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
+import { MDXProvider } from '@mdx-js/react'
 
 import theme from 'src/theme'
 
@@ -14,14 +15,18 @@ const Wrapper = ({ element }: Props) => (
     <ThemeProvider theme={theme}>
         <>
             <GlobalStyles />
-            <Box
-                el={Box.Element.Main}
-                pb={{ sm: 8, lg: 10 }}
-                pt={{ sm: 6, lg: 8 }}
-                px={{ sm: 6, lg: 8 }}
-            >
-                {element}
-            </Box>
+            <MDXProvider>
+                <Box
+                    css={`
+                        max-width: 40rem;
+                        margin-left: auto;
+                        margin-right: auto;
+                    `}
+                    el={Box.Element.Main}
+                >
+                    {element}
+                </Box>
+            </MDXProvider>
         </>
     </ThemeProvider>
 )
