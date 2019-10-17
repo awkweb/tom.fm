@@ -5,25 +5,14 @@ import Text from './Text'
 
 interface Props {
     children: ReactNode
+    cite: string
     source: ReactNode | string
 }
 
-const Blockquote = ({ children, source }: Props) => (
+const Blockquote = ({ children, source = '', ...props }: Props) => (
     <Box ml={3} my={5}>
-        <Box
-            bl
-            borderColor={Box.BorderColor.Muted}
-            css={`
-                blockquote {
-                    margin-left: 0;
-                }
-            `}
-            el={Box.Element.Div}
-            pl={3}
-        >
-            <Text el={Text.Element.Blockquote} noMargin>
-                {children}
-            </Text>
+        <Box el={Box.Element.Blockquote} ml={0} my={0} {...props}>
+            {children}
         </Box>
         {source && (
             <Text color={Text.Color.Secondary} size={Text.Size.Small}>
@@ -32,9 +21,5 @@ const Blockquote = ({ children, source }: Props) => (
         )}
     </Box>
 )
-
-Blockquote.defaultProps = {
-    source: '',
-}
 
 export default Blockquote

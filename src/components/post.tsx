@@ -15,11 +15,16 @@ interface Props {
 const Post = ({ date, children, permalink, title }: Props) => {
     return (
         <Box el={Box.Element.Article}>
-            <Box>
-                <Text el={Text.Element.H1}>
+            <Box mb={7}>
+                <Text el={Text.Element.H1} noMargin size={Text.Size.Heading}>
                     <Link to={permalink}>{title}</Link>
                 </Text>
-                <Text el={Text.Element.Time}>{date}</Text>
+                <Box>
+                    <Text color={Text.Color.Muted} el={Text.Element.Time}>
+                        {date}
+                    </Text>
+                    ×
+                </Box>
             </Box>
             <Box>{children}</Box>
         </Box>

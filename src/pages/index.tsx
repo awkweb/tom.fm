@@ -23,7 +23,7 @@ export const query = graphql`
                     id
                     body
                     frontmatter {
-                        date(formatString: "MMMM DD, YYYY")
+                        date(formatString: "MMM DD, YYYY")
                         permalink
                         title
                     }

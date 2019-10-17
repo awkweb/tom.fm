@@ -35,6 +35,15 @@ const GlobalStyle = createGlobalStyle`
     h6 {
         margin-bottom: ${props => props.theme.space[5]};
         margin-top: ${props => props.theme.space[8]};
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    a {
+        color: ${props => props.theme.colors.secondary};
     }
 
     hr {
@@ -61,16 +70,31 @@ const GlobalStyle = createGlobalStyle`
     }
 
     code {
-        font-family: ${props => props.theme.fonts.monospace};
+        font-family: ${props => props.theme.fonts.monospace} !important;
         font-feature-settings: 'liga' on;
         font-size: 95% !important;
+        line-height: 95%;
+    }
+
+    p code {
+        background-color: hsl(109, 0%, 95%);
+        color: ${props => props.theme.colors.text};
+        padding: 1px;
+    }
+
+    mark {
+        background-color: hsl(49, 77%, 90%);
+        color: ${props => props.theme.colors.text};
+        padding: 1px;
     }
 
     sup {
         font-feature-settings: 'sups' on;
         vertical-align: initial;
-        a::after {
-            display: none;
+        
+        a {
+            font-size: ${props => props.theme.fontSizes.root};
+            text-decoration: none;
         }
     }
 `

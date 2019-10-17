@@ -23,7 +23,7 @@ const Wrapper = ({ element }: Props) => (
             <MDXProvider components={components}>
                 <Box
                     css={`
-                        max-width: 40rem;
+                        max-width: 39rem;
                         margin-left: auto;
                         margin-right: auto;
                     `}
