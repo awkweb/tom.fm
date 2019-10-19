@@ -23,13 +23,12 @@ const Wrapper = ({ element }: Props) => (
             <MDXProvider components={components}>
                 <Box
                     css={`
-                        max-width: 39rem;
+                        max-width: 40rem;
                         margin-left: auto;
                         margin-right: auto;
                     `}
                     el={Box.Element.Main}
-                    pt={5}
-                    px={{ sm: 3, lg: 5 }}
+                    pt={10}
                 >
                     {element}
                 </Box>

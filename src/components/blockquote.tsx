@@ -15,7 +15,11 @@ const Blockquote = ({ children, source = '', ...props }: Props) => (
             {children}
         </Box>
         {source && (
-            <Text color={Text.Color.Secondary} size={Text.Size.Small}>
+            <Text
+                color={Text.Color.Secondary}
+                el={Text.Element.Cite}
+                size={Text.Size.Small}
+            >
                 {source}
             </Text>
         )}

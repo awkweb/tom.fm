@@ -22,7 +22,7 @@ const borderWidths = {
 const colors = {
     [_Color.Palette.Accent]: 'red',
     [_Color.Palette.Background]: 'hsl(104, 100%, 100%)',
-    [_Color.Palette.Muted]: 'hsl(109, 0%, 80%)',
+    [_Color.Palette.Muted]: 'hsl(109, 0%, 75%)',
     [_Color.Palette.Primary]: 'hsl(240, 100%, 50%)',
     [_Color.Palette.Secondary]: 'hsl(109, 0%, 25%)',
     [_Color.Palette.Selection]: 'hsl(109, 0%, 85%)',
@@ -36,17 +36,17 @@ const fonts = {
 }
 const fontSizes = {
     [_Typography.Size.Body]: toRemString(DEFAULT_PIXEL_SIZE),
-    [_Typography.Size.Heading]: toRemString(24),
+    [_Typography.Size.Heading]: toRemString(18),
     [_Typography.Size.Root]: `${DEFAULT_PIXEL_SIZE}px`,
     [_Typography.Size.Small]: toRemString(14),
 }
 const fontWeights = {
     [_Typography.Weight.Bold]: 700,
-    [_Typography.Weight.SemiBold]: 600,
+    [_Typography.Weight.Medium]: 500,
     [_Typography.Weight.Normal]: 400,
 }
 const lineHeights = {
-    [_Typography.LineHeight.Body]: toRemString(26),
+    [_Typography.LineHeight.Body]: toRemString(28),
     [_Typography.LineHeight.Heading]: toRemString(30),
 }
 

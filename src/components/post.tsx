@@ -16,35 +16,55 @@ interface Props {
 
 const Post = ({ author, children, date, entry, permalink, title }: Props) => {
     return (
-        <Box bb el={Box.Element.Article} mb={5}>
-            <Box mb={7}>
-                <Box mb={2}>
-                    <Text
-                        el={Text.Element.H1}
-                        noMargin
-                        size={Text.Size.Heading}
-                    >
-                        <Link to={permalink}>{title}</Link>
-                    </Text>
-                </Box>
-                <Box
-                    alignItems={Box.AlignItems.Baseline}
-                    display={Box.Display.Flex}
+        <Box bb el={Box.Element.Article} mb={8} pb={7} px={{ sm: 3, lg: 5 }}>
+            <Text el={Text.Element.H1} noMargin size={Text.Size.Heading}>
+                <Link to={permalink}>{title}</Link>
+            </Text>
+            <Box
+                alignItems={Box.AlignItems.Baseline}
+                css={`
+                    line-height: 20px;
+                `}
+                display={Box.Display.Flex}
+                mb={6}
+                mt={1}
+            >
+                <Text
+                    color={Text.Color.Muted}
+                    size={Text.Size.Small}
+                    weight={Text.Weight.Medium}
                 >
-                    <Text color={Text.Color.Secondary} size={Text.Size.Small}>
-                        {author}&nbsp;&nbsp;×&nbsp;&nbsp;
-                    </Text>
-                    <Text
-                        color={Text.Color.Secondary}
-                        el={Text.Element.Time}
-                        size={Text.Size.Small}
-                    >
-                        {date}&nbsp;&nbsp;×&nbsp;&nbsp;
-                    </Text>
-                    <Text color={Text.Color.Secondary} size={Text.Size.Small}>
-                        Entry {entry}
-                    </Text>
-                </Box>
+                    {author}
+                </Text>
+                <Text
+                    color={Text.Color.Muted}
+                    size={Text.Size.Small}
+                    weight={Text.Weight.Medium}
+                >
+                    &nbsp;&nbsp;&nbsp;×&nbsp;&nbsp;&nbsp;
+                </Text>
+                <Text
+                    color={Text.Color.Muted}
+                    el={Text.Element.Time}
+                    size={Text.Size.Small}
+                    weight={Text.Weight.Medium}
+                >
+                    {date}
+                </Text>
+                <Text
+                    color={Text.Color.Muted}
+                    size={Text.Size.Small}
+                    weight={Text.Weight.Medium}
+                >
+                    &nbsp;&nbsp;&nbsp;×&nbsp;&nbsp;&nbsp;
+                </Text>
+                <Text
+                    color={Text.Color.Muted}
+                    size={Text.Size.Small}
+                    weight={Text.Weight.Medium}
+                >
+                    Entry {entry}
+                </Text>
             </Box>
             <Box>{children}</Box>
         </Box>

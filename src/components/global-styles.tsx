@@ -8,8 +8,6 @@ const GlobalStyle = createGlobalStyle`
 
     :target {
         background-color: hsl(213, 100%, 96%);
-        border-radius: ${props => props.theme.radii.small};
-        padding: 1px;
     }
 
     html {
@@ -22,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${props => props.theme.colors.background};
         color: ${props => props.theme.colors.text};
         font-family: ${props => props.theme.fonts.body};
-        font-feature-settings: 'calt' on, 'liga' on, 'zero' on;
+        font-feature-settings: 'calt' on, 'liga' on;
         line-height: ${props => props.theme.lineHeights.body};
         min-height: 100vh;
         text-rendering: optimizeLegibility;
@@ -85,25 +83,20 @@ const GlobalStyle = createGlobalStyle`
 
     p code {
         background-color: hsl(109, 0%, 95%);
-        border-radius: ${props => props.theme.radii.small};
         color: ${props => props.theme.colors.text};
-        padding: 1px;
     }
 
     mark {
         background-color: hsl(49, 77%, 90%);
-        border-radius: ${props => props.theme.radii.small};
         color: ${props => props.theme.colors.text};
-        padding: 1px;
     }
 
     figure {
-        margin: ${props => props.theme.space[7]} 0 ${props =>
-    props.theme.space[6]};
+        margin: ${props => props.theme.space[5]} 0 ${props =>
+    props.theme.space[5]};
 
         img,
         .gatsby-resp-image-background-image {
-            border-radius: ${props => props.theme.radii.large};
             max-width: 100%;
         }
 
@@ -122,6 +115,10 @@ const GlobalStyle = createGlobalStyle`
             font-size: ${props => props.theme.fontSizes.root};
             text-decoration: none;
         }
+    }
+
+    cite {
+        font-style: normal;
     }
 
     .footnotes {

@@ -38,7 +38,7 @@ declare module 'styled-components' {
         }
         fontWeights: {
             [_Typography.Weight.Bold]: number
-            [_Typography.Weight.SemiBold]: number
+            [_Typography.Weight.Medium]: number
             [_Typography.Weight.Normal]: number
         }
         lineHeights: {
