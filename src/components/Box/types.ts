@@ -19,7 +19,7 @@ export interface Props {
     bb?: LazyResponsive<boolean>
     bl?: LazyResponsive<boolean>
     borderColor?: _Color.Palette
-    borderRadius?: _Border.Radius
+    borderRadius?: LazyResponsive<_Border.Radius>
     borderStyle?: _Border.Style
     borderWidth?: _Border.Width
     br?: LazyResponsive<boolean>

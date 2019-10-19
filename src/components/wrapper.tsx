@@ -7,6 +7,7 @@ import theme from 'src/theme'
 import GlobalStyles from './global-styles'
 import Box from './Box'
 import Blockquote from './blockquote'
+import Header from './header'
 
 const components = {
     blockquote: Blockquote,
@@ -28,8 +29,9 @@ const Wrapper = ({ element }: Props) => (
                         margin-right: auto;
                     `}
                     el={Box.Element.Main}
-                    pt={10}
+                    pt={8}
                 >
+                    <Header />
                     {element}
                 </Box>
             </MDXProvider>

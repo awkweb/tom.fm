@@ -63,7 +63,7 @@ const Post = ({ author, children, date, entry, permalink, title }: Props) => {
                     size={Text.Size.Small}
                     weight={Text.Weight.Medium}
                 >
-                    Entry {entry}
+                    Broadcast {entry}
                 </Text>
             </Box>
             <Box>{children}</Box>

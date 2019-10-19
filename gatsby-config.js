@@ -3,7 +3,8 @@ const mdxOptions = require('./config/plugin-mdx')
 module.exports = {
     siteMetadata: {
         title: 'tom.fm',
-        description: 'Tom Meagher is a Internet Explorer in New York City.',
+        description:
+            'Welcome to tom.fm. A hypermedia broadcasting service transmitting thoughts on technology, productivity, culture, and related topics.',
         author: 'Tom Meagher',
         email: 'tom@meagher.co',
         networks: [
