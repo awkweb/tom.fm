@@ -1,27 +1,17 @@
+const feedOptions = require('./config/plugin-feed')
 const mdxOptions = require('./config/plugin-mdx')
 
 module.exports = {
     siteMetadata: {
         title: 'tom.fm',
+        siteUrl: 'https://tom.fm',
         description:
             'Welcome to tom.fm. A hypermedia broadcasting service transmitting thoughts on technology, productivity, culture, and related topics.',
         author: 'Tom Meagher',
         email: 'tom@meagher.co',
-        networks: [
-            { name: 'Are.na', url: 'https://are.na/tom-meagher/' },
-            { name: 'GitHub', url: 'https://github.com/tmm/' },
-            { name: 'Twitter', url: 'https://twitter.com/tomfme/' },
-        ],
+        twitter: 'tomfme',
     },
     plugins: [
-        'gatsby-plugin-typescript',
-        {
-            resolve: `gatsby-plugin-mdx`,
-            options: mdxOptions,
-        },
-        'gatsby-plugin-catch-links',
-        'gatsby-plugin-styled-components',
-        'gatsby-plugin-react-helmet',
         {
             resolve: 'gatsby-source-filesystem',
             options: {
@@ -29,7 +19,20 @@ module.exports = {
                 path: `${__dirname}/src/posts`,
             },
         },
+        {
+            resolve: 'gatsby-plugin-mdx',
+            options: mdxOptions,
+        },
+        {
+            resolve: 'gatsby-plugin-feed',
+            options: feedOptions,
+        },
+        'gatsby-plugin-typescript',
+        'gatsby-plugin-catch-links',
+        'gatsby-plugin-styled-components',
+        'gatsby-plugin-react-helmet',
         'gatsby-transformer-sharp',
         'gatsby-plugin-sharp',
+        'gatsby-plugin-twitter',
     ],
 }

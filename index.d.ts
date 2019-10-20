@@ -6,6 +6,7 @@ interface Frontmatter {
     entry: string
     permalink: string
     title: string
+    twitter: string
 }
 
 interface Post {

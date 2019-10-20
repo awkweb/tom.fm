@@ -6,8 +6,9 @@ const query = graphql`
     query {
         site {
             siteMetadata {
-                title
                 description
+                title
+                twitter
             }
         }
     }
@@ -39,7 +40,7 @@ const Head = ({ title, description = '', keywords = [] }: Props) => {
             <meta content="summary" name="twitter:card" />
             <meta content={t} name="twitter:title" />
             <meta content={d} name="twitter:description" />
-            <meta content="tomfme" name="twitter:creator" />
+            <meta content={`@${meta.twitter}`} name="twitter:creator" />
             {keywords.length && (
                 <meta content={keywords.join(`, `)} name="keywords" />
             )}

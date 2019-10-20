@@ -2,12 +2,15 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     ::selection {
-        background: ${props => props.theme.colors.selection};
+        background-color: ${props => props.theme.colors.selection};
         textShadow: none;
     }
 
     :target {
-        background: ${props => props.theme.colors.selection};
+        border-radius: ${props => props.theme.radii.small};
+        background-color: ${props => props.theme.colors.highlight};
+        color: ${props => props.theme.colors.text};
+        padding: 1px 3px;
     }
 
     html {
@@ -142,15 +145,6 @@ const GlobalStyle = createGlobalStyle`
     .footnote-backref {
         margin-left: ${props => props.theme.space[1]};
         text-decoration: none;
-    }
-
-    button {
-        background-color: ${props => props.theme.colors.text} !important;
-        color: ${props => props.theme.colors.background} !important;
-    }
-
-    input {
-        background-color: ${props => props.theme.colors.background} !important;
     }
 `
 

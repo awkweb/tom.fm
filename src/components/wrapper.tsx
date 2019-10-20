@@ -12,6 +12,7 @@ import Footer from './footer'
 
 const components = {
     blockquote: Blockquote,
+    Blockquote,
 }
 
 interface Props {
