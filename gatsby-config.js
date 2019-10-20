@@ -1,4 +1,5 @@
-const feedOptions = require('./config/plugin-feed')
+const mdxFeed = require('gatsby-plugin-mdx/feed')
+
 const mdxOptions = require('./config/plugin-mdx')
 
 module.exports = {
@@ -25,7 +26,7 @@ module.exports = {
         },
         {
             resolve: 'gatsby-plugin-feed',
-            options: feedOptions,
+            options: mdxFeed,
         },
         'gatsby-plugin-typescript',
         'gatsby-plugin-catch-links',

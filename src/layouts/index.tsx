@@ -16,7 +16,8 @@ const Layout = ({ author, posts }: Props) => (
             ({
                 node: {
                     body,
-                    frontmatter: { date, entry, permalink, title },
+                    frontmatter: { date, title },
+                    fields: { entry, slug },
                     id,
                 },
             }) => (
@@ -25,7 +26,7 @@ const Layout = ({ author, posts }: Props) => (
                     date={date}
                     entry={entry}
                     key={id}
-                    permalink={permalink}
+                    slug={slug}
                     title={title}
                 >
                     <MDXRenderer>{body}</MDXRenderer>

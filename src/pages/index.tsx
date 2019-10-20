@@ -35,14 +35,16 @@ export const query = graphql`
         allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
             edges {
                 node {
-                    id
                     body
+                    fields {
+                        entry
+                        slug
+                    }
                     frontmatter {
                         date(formatString: "MMMM DD, YYYY")
-                        entry
-                        permalink
                         title
                     }
+                    id
                 }
             }
         }

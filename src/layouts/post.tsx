@@ -8,8 +8,8 @@ interface Props {
     date: string
     description: string
     children: ReactNode
-    entry: string
-    permalink: string
+    entry: number
+    slug: string
     title: string
 }
 
@@ -19,7 +19,7 @@ const Layout = ({
     date,
     description,
     entry,
-    permalink,
+    slug,
     title,
 }: Props) => (
     <>
@@ -28,7 +28,7 @@ const Layout = ({
             author={author}
             date={date}
             entry={entry}
-            permalink={permalink}
+            slug={slug}
             title={title}
         >
             {children}

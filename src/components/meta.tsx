@@ -6,7 +6,7 @@ import Text from './Text'
 interface Props {
     author: string
     date: string
-    entry: string
+    entry: number
 }
 
 const Meta = ({ author, date, entry }: Props) => (
@@ -54,7 +54,9 @@ const Meta = ({ author, date, entry }: Props) => (
             size={Text.Size.Small}
             weight={Text.Weight.Medium}
         >
-            Broadcast {entry}
+            Broadcast {entry < 100 ? '0' : ''}
+            {entry < 10 ? '0' : ''}
+            {entry}
         </Text>
     </Box>
 )

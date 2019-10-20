@@ -18,7 +18,9 @@ interface Props {
 const Template = ({
     data: {
         mdx: {
-            frontmatter: { date, description, entry, permalink, title },
+            excerpt: description,
+            fields: { entry, slug },
+            frontmatter: { date, title },
             body,
         },
         site: {
@@ -31,7 +33,7 @@ const Template = ({
         date={date}
         description={description}
         entry={entry}
-        permalink={permalink}
+        slug={slug}
         title={title}
     >
         <MDXRenderer>{body}</MDXRenderer>
@@ -45,14 +47,15 @@ export const query = graphql`
                 author
             }
         }
-        mdx(frontmatter: { permalink: { eq: $path } }) {
-            id
+        mdx(fields: { slug: { eq: $path } }) {
             body
+            excerpt
+            fields {
+                entry
+                slug
+            }
             frontmatter {
                 date(formatString: "MMMM DD, YYYY")
-                description
-                entry
-                permalink
                 title
             }
         }
