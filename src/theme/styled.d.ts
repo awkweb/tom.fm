@@ -19,6 +19,7 @@ declare module 'styled-components' {
         colors: {
             [_Color.Palette.Accent]: string
             [_Color.Palette.Background]: string
+            [_Color.Palette.Highlight]: string
             [_Color.Palette.Muted]: string
             [_Color.Palette.Primary]: string
             [_Color.Palette.Secondary]: string

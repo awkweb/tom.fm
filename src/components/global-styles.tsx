@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     :target {
-        background-color: hsl(213, 100%, 96%);
+        background: ${props => props.theme.colors.selection};
     }
 
     html {
@@ -48,7 +48,12 @@ const GlobalStyle = createGlobalStyle`
     }
 
     a {
-        color: ${props => props.theme.colors.secondary};
+        color: ${props => props.theme.colors.primary};
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
     hr {
@@ -82,13 +87,17 @@ const GlobalStyle = createGlobalStyle`
     }
 
     p code {
-        background-color: hsl(109, 0%, 95%);
+        border-radius: ${props => props.theme.radii.small};
+        background-color: ${props => props.theme.colors.selection};
         color: ${props => props.theme.colors.text};
+        padding: 1px 3px;
     }
 
     mark {
-        background-color: hsl(49, 77%, 90%);
+        border-radius: ${props => props.theme.radii.small};
+        background-color: ${props => props.theme.colors.highlight};
         color: ${props => props.theme.colors.text};
+        padding: 1px 3px;
     }
 
     figure {
@@ -114,6 +123,11 @@ const GlobalStyle = createGlobalStyle`
         a {
             font-size: ${props => props.theme.fontSizes.root};
             text-decoration: none;
+            &::before { content: '['; }
+            &::after { content: ']'; }
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 
@@ -126,7 +140,17 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .footnote-backref {
+        margin-left: ${props => props.theme.space[1]};
         text-decoration: none;
+    }
+
+    button {
+        background-color: ${props => props.theme.colors.text} !important;
+        color: ${props => props.theme.colors.background} !important;
+    }
+
+    input {
+        background-color: ${props => props.theme.colors.background} !important;
     }
 `
 

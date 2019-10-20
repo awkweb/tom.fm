@@ -10,7 +10,15 @@ interface Props {
 }
 
 const Blockquote = ({ children, source = '', ...props }: Props) => (
-    <Box ml={3} my={5}>
+    <Box
+        css={`
+            a {
+                color: inherit;
+            }
+        `}
+        ml={3}
+        my={5}
+    >
         <Box el={Box.Element.Blockquote} ml={0} my={0} {...props}>
             {children}
         </Box>
@@ -20,7 +28,7 @@ const Blockquote = ({ children, source = '', ...props }: Props) => (
                 el={Text.Element.Cite}
                 size={Text.Size.Small}
             >
-                {source}
+                {props.cite ? <a href={props.cite}>{source}</a> : source}
             </Text>
         )}
     </Box>

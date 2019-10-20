@@ -1,5 +1,4 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
 
 import Box from './Box'
 import Text from './Text'
@@ -15,21 +14,20 @@ const Header = () => (
             line-height: 24px;
         `}
         el={Box.Element.Header}
-        mb={8}
-        p={{ sm: 3, lg: 5 }}
+        mb={{ sm: 7, md: 8 }}
+        mt={{ md: 7 }}
+        p={{ sm: 3, md: 5 }}
     >
-        <Box mb={2}>
-            <Text
-                color={Text.Color.Background}
-                el={Text.Element.H1}
-                font={Text.Font.Monospace}
-                noMargin
-                size={Text.Size.Root}
-                weight={Text.Weight.Bold}
-            >
-                Welcome to tom.fm
-            </Text>
-        </Box>
+        <Text
+            color={Text.Color.Background}
+            el={Text.Element.H1}
+            font={Text.Font.Monospace}
+            noMargin
+            size={Text.Size.Root}
+            weight={Text.Weight.Bold}
+        >
+            &gt; Welcome to tom.fm
+        </Text>
         <Text
             color={Text.Color.Background}
             el={Text.Element.P}
@@ -38,7 +36,7 @@ const Header = () => (
             size={Text.Size.Root}
         >
             A hypermedia broadcasting service transmitting thoughts on
-            technology, productivity, culture, and related topics.
+            technology, productivity, culture, &amp; related topics.
         </Text>
     </Box>
 )

@@ -20,11 +20,12 @@ const borderWidths = {
 }
 
 const colors = {
-    [_Color.Palette.Accent]: 'pink',
+    [_Color.Palette.Accent]: 'hsl(328, 50%, 80%)',
     [_Color.Palette.Background]: 'hsl(240, 100%, 100%)',
-    [_Color.Palette.Muted]: 'hsl(240, 5%, 70%)',
-    [_Color.Palette.Primary]: 'hsl(240, 55%, 50%)',
-    [_Color.Palette.Secondary]: 'hsl(240, 5%, 25%)',
+    [_Color.Palette.Highlight]: 'hsl(50, 77%, 85%)',
+    [_Color.Palette.Muted]: 'hsl(240, 5%, 65%)',
+    [_Color.Palette.Primary]: 'hsl(240, 45%, 50%)',
+    [_Color.Palette.Secondary]: 'hsl(240, 5%, 30%)',
     [_Color.Palette.Selection]: 'hsl(240, 5%, 85%)',
     [_Color.Palette.Text]: 'hsl(240, 5%, 15%)',
 }
@@ -53,7 +54,7 @@ const lineHeights = {
 const radii = {
     [_Border.Radius.None]: 0,
     [_Border.Radius.Small]: '2px',
-    [_Border.Radius.Large]: '10px',
+    [_Border.Radius.Large]: '8px',
 }
 
 const space = [
