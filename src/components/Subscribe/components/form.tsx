@@ -55,7 +55,7 @@ const useButtondown = () => {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
-                        Authorization: `Token ${process.env.gatsby_buttondown_api_key}`,
+                        Authorization: `Token ${process.env.GATSBY_BUTTONDOWN_API_KEY}`,
                     },
                     body: JSON.stringify(body),
                 },
