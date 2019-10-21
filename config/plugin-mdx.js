@@ -9,6 +9,7 @@ module.exports = {
                 showCaptions: true,
             },
         },
+        'gatsby-remark-responsive-iframe',
         'gatsby-remark-autolink-headers',
         'gatsby-remark-copy-linked-files',
         'gatsby-remark-smartypants',

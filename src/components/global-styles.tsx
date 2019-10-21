@@ -73,14 +73,14 @@ const GlobalStyle = createGlobalStyle`
     ol {
         margin-bottom: ${props => props.theme.space[5]};
         margin-left: ${props => props.theme.space[3]};
-        margin-top: ${props => props.theme.space[5]};
+        margin-top: 0;
         padding-left: ${props => props.theme.space[3]};
     }
 
     pre {
         margin-bottom: ${props => props.theme.space[5]};
         margin-left: ${props => props.theme.space[3]};
-        margin-top: ${props => props.theme.space[5]};
+        margin-top: 0;
     }
 
     code {
@@ -160,6 +160,11 @@ const GlobalStyle = createGlobalStyle`
             margin-bottom: 0.25rem;
             visibility: hidden;
         }
+    }
+
+    // gatsby-remark-responsive-iframe
+    .gatsby-resp-iframe-wrapper {
+        margin-bottom: ${props => props.theme.space[5]};
     }
 `
 
