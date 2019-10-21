@@ -15,10 +15,10 @@
 
 #### Development
 
-Create a `.env` file:
+Create a `.env.development` file:
 
 ```
-GATSBY_BUTTONDOWN_API_KEY=bc7e5a10-c92e-2c9e-a7aa-c979940f561c
+gatsby_buttondown_api_key=bc7e5a10-c92e-2c9e-a7aa-c979940f561c
 ```
 
 #### Production
@@ -26,7 +26,7 @@ GATSBY_BUTTONDOWN_API_KEY=bc7e5a10-c92e-2c9e-a7aa-c979940f561c
 Run following commands to configure [`now`](https://now.sh):
 
 ```
-> now secrets add GATSBY_BUTTONDOWN_API_KEY bc7e5a10-c92e-2c9e-a7aa-c979940f561c
+> now secrets add gatsby_buttondown_api_key bc7e5a10-c92e-2c9e-a7aa-c979940f561c
 > now dns add tom.fm '@' TXT 'v=spf1 include:mailgun.org ~all'
 > now dns add tom.fm 'krs._domainkey' TXT 'k=rsa; p=MIGfMA0GCSqGSI[...]AQAB'
 > now dns add tom.fm 'email' CNAME 'mailgun.org'

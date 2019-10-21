@@ -49,15 +49,20 @@ const useButtondown = () => {
                 email,
                 referrer_url: 'tom.fm',
             }
-            await fetch('https://api.buttondown.email/v1/subscribers', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: `Token ${process.env.GATSBY_BUTTONDOWN_API_KEY}`,
+            const response = await fetch(
+                'https://api.buttondown.email/v1/subscribers',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Token ${process.env.gatsby_buttondown_api_key}`,
+                    },
+                    body: JSON.stringify(body),
                 },
-                body: JSON.stringify(body),
-            })
-            setIsSubscribed(true)
+            )
+            if (response.ok) {
+                setIsSubscribed(true)
+            }
         } catch (e) {
             console.log(e)
         } finally {
