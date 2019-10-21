@@ -6,13 +6,6 @@ const GlobalStyle = createGlobalStyle`
         textShadow: none;
     }
 
-    :target {
-        border-radius: ${props => props.theme.radii.small};
-        background-color: ${props => props.theme.colors.highlight};
-        color: ${props => props.theme.colors.text};
-        padding: 1px 3px;
-    }
-
     html {
         -webkit-text-size-adjust: 100%;
         font-size: ${props => props.theme.fontSizes.root};
@@ -31,7 +24,7 @@ const GlobalStyle = createGlobalStyle`
 
     p {
         margin-bottom: ${props => props.theme.space[5]};
-        margin-top: ${props => props.theme.space[5]};
+        margin-top: 0;
     }
 
     h1,
@@ -40,9 +33,17 @@ const GlobalStyle = createGlobalStyle`
     h4,
     h5,
     h6 {
+        cursor: text;
         line-height: ${props => props.theme.lineHeights.heading};
-        margin-bottom: ${props => props.theme.space[5]};
+        margin-bottom: ${props => props.theme.space[3]};
         margin-top: ${props => props.theme.space[8]};
+
+        &:hover {
+            // gatsby-remark-autolink-headers
+            .anchor svg {
+                visibility: visible;
+            }
+        }
 
         a {
             color: inherit;
@@ -145,6 +146,20 @@ const GlobalStyle = createGlobalStyle`
     .footnote-backref {
         margin-left: ${props => props.theme.space[1]};
         text-decoration: none;
+    }
+
+    // gatsby-remark-autolink-headers
+    .anchor {
+        color: ${props => props.theme.colors.primary};
+        float: left;
+        margin-left: -20px;
+        padding-right: 4px;
+        position: relative;
+
+        svg {
+            margin-bottom: 0.25rem;
+            visibility: hidden;
+        }
     }
 `
 
