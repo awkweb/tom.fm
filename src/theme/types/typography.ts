@@ -13,6 +13,7 @@ export enum Font {
 export enum LineHeight {
     Body = 'body',
     Heading = 'heading',
+    Small = 'small',
 }
 
 export enum Size {

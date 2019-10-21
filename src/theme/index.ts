@@ -49,12 +49,14 @@ const fontWeights = {
 const lineHeights = {
     [_Typography.LineHeight.Body]: toRemString(28),
     [_Typography.LineHeight.Heading]: toRemString(30),
+    [_Typography.LineHeight.Small]: toRemString(18),
 }
 
 const radii = {
+    [_Border.Radius.Circle]: '50%',
+    [_Border.Radius.Large]: '8px',
     [_Border.Radius.None]: 0,
     [_Border.Radius.Small]: '2px',
-    [_Border.Radius.Large]: '8px',
 }
 
 const space = [

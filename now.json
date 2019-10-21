@@ -1,5 +1,8 @@
 {
     "version": 2,
+    "env": {
+        "GATSBY_BUTTONDOWN_API_KEY": "@gatsby-buttondown-api-key"
+    },
     "routes": [
         { "handle": "filesystem" },
         { "src": "/(.*)", "status": 404, "dest": "/404" }

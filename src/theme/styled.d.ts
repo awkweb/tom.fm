@@ -45,11 +45,13 @@ declare module 'styled-components' {
         lineHeights: {
             [_Typography.LineHeight.Body]: string
             [_Typography.LineHeight.Heading]: string
+            [_Typography.LineHeight.Small]: string
         }
         radii: {
+            [_Border.Radius.Circle]: string
+            [_Border.Radius.Large]: string
             [_Border.Radius.None]: number
             [_Border.Radius.Small]: string
-            [_Border.Radius.Large]: string
         }
         responsive: Responsive
         space: string[]

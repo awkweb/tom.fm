@@ -26,6 +26,7 @@ const Blockquote = ({ children, source = '', ...props }: Props) => (
             <Text
                 color={Text.Color.Secondary}
                 el={Text.Element.Cite}
+                lineHeight={Text.LineHeight.Small}
                 size={Text.Size.Small}
             >
                 {props.cite ? <a href={props.cite}>{source}</a> : source}

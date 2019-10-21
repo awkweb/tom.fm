@@ -12,45 +12,50 @@ interface Props {
 const Meta = ({ author, date, entry }: Props) => (
     <Box
         alignItems={Box.AlignItems.Baseline}
-        css={`
-            line-height: 20px;
-            white-space: nowrap;
-        `}
         display={Box.Display.Flex}
         mb={6}
         mt={1}
     >
         <Text
             color={Text.Color.Muted}
+            lineHeight={Text.LineHeight.Small}
             size={Text.Size.Small}
             weight={Text.Weight.Medium}
         >
             {author}
         </Text>
-        <Text
-            color={Text.Color.Muted}
-            size={Text.Size.Small}
-            weight={Text.Weight.Medium}
-        >
-            &nbsp;&nbsp;&nbsp;×&nbsp;&nbsp;&nbsp;
-        </Text>
+        <Box mx={{ sm: 2, md: 3 }}>
+            <Text
+                color={Text.Color.Muted}
+                lineHeight={Text.LineHeight.Small}
+                size={Text.Size.Small}
+                weight={Text.Weight.Medium}
+            >
+                ×
+            </Text>
+        </Box>
         <Text
             color={Text.Color.Muted}
             el={Text.Element.Time}
+            lineHeight={Text.LineHeight.Small}
             size={Text.Size.Small}
             weight={Text.Weight.Medium}
         >
             {date}
         </Text>
+        <Box mx={{ sm: 2, md: 3 }}>
+            <Text
+                color={Text.Color.Muted}
+                lineHeight={Text.LineHeight.Small}
+                size={Text.Size.Small}
+                weight={Text.Weight.Medium}
+            >
+                ×
+            </Text>
+        </Box>
         <Text
             color={Text.Color.Muted}
-            size={Text.Size.Small}
-            weight={Text.Weight.Medium}
-        >
-            &nbsp;&nbsp;&nbsp;×&nbsp;&nbsp;&nbsp;
-        </Text>
-        <Text
-            color={Text.Color.Muted}
+            lineHeight={Text.LineHeight.Small}
             size={Text.Size.Small}
             weight={Text.Weight.Medium}
         >

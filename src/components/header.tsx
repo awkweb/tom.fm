@@ -14,8 +14,7 @@ const Header = () => (
             line-height: 24px;
         `}
         el={Box.Element.Header}
-        mb={{ sm: 7, md: 8 }}
-        mt={{ md: 7 }}
+        my={{ sm: 7, md: 8 }}
         p={{ sm: 3, md: 5 }}
     >
         <Text

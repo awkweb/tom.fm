@@ -2,6 +2,9 @@
 yarn-debug.log*
 yarn-error.log*
 
+# Environments
+.env.*
+
 # Dependency directories
 node_modules/
 

@@ -1,4 +1,5 @@
 import 'typeface-inter'
+import 'firacode'
 
 import 'sanitize.css'
 import 'sanitize.css/typography.css'

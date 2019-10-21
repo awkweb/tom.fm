@@ -17,7 +17,13 @@ interface Props {
 
 const Post = ({ author, children, date, entry, slug, title }: Props) => {
     return (
-        <Box bb el={Box.Element.Article} mb={8} pb={7} px={{ sm: 3, md: 5 }}>
+        <Box
+            bb
+            el={Box.Element.Article}
+            mb={{ sm: 6, md: 7 }}
+            pb={{ sm: 6, md: 7 }}
+            px={{ sm: 3, md: 5 }}
+        >
             <Text el={Text.Element.H1} noMargin size={Text.Size.Heading}>
                 <Link to={slug}>{title}</Link>
             </Text>
