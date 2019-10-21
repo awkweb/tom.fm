@@ -1,6 +1,6 @@
-## Hello, GitHub!
+## tom.fm
 
-Thanks for checking out the innards of [my website](https://tom.fm/).
+> A hypermedia broadcasting service transmitting thoughts on technology, productivity, culture, & related topics.
 
 ## Scripts
 
@@ -26,7 +26,7 @@ GATSBY_BUTTONDOWN_API_KEY=bc7e5a10-c92e-2c9e-a7aa-c979940f561c
 Run following commands to configure [`now`](https://now.sh):
 
 ```
-> now secrets add gatsby-buttondown-api-key bc7e5a10-c92e-2c9e-a7aa-c979940f561c
+> now secrets add GATSBY_BUTTONDOWN_API_KEY bc7e5a10-c92e-2c9e-a7aa-c979940f561c
 > now dns add tom.fm '@' TXT 'v=spf1 include:mailgun.org ~all'
 > now dns add tom.fm 'krs._domainkey' TXT 'k=rsa; p=MIGfMA0GCSqGSI[...]AQAB'
 > now dns add tom.fm 'email' CNAME 'mailgun.org'
