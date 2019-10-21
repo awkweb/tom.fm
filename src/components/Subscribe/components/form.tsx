@@ -110,6 +110,8 @@ const Form = () => {
         <Box
             css={`
                 max-width: 24rem;
+                margin-left: auto;
+                margin-right: auto;
             `}
             display={Box.Display.Flex}
             el={Box.Element.Form}
@@ -119,7 +121,7 @@ const Form = () => {
         >
             <StyledInput
                 disabled={isLoading}
-                placeholder="email@address.com"
+                placeholder="email@example.com"
                 value={email}
                 onChange={handleChange}
             />
