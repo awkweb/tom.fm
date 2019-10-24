@@ -8,20 +8,19 @@ import Button from './button'
 const StyledInput = styled('input')`
     ::placeholder {
         color: ${props => props.theme.colors.secondary};
+        opacity: 1;
     }
     appearance: none;
-    background-color: ${props => props.theme.colors.background};
-    border: ${props =>
-        `${props.theme.borderWidths.normal} ${props.theme.borderStyles.solid} ${props.theme.colors.text}`};
-    border-top-left-radius: ${props => props.theme.radii.large};
-    border-bottom-left-radius: ${props => props.theme.radii.large};
+    background-color: transparent;
     border-right: none;
+    border: none;
     color: ${props => props.theme.colors.text};
-    flex: 7;
-    font-family: ${props => props.theme.fonts.monospace};
-    height: 2.25rem;
+    font-family: ${props => props.theme.fonts.body};
+    font-size: ${props => props.theme.fontSizes.root};
+    line-height: ${props => props.theme.lineHeights.body};
     outline: none;
-    padding: ${props => props.theme.space[1]} ${props => props.theme.space[3]};
+    min-width: 10.25rem;
+    padding: 0;
 `
 
 const useButtondown = () => {
@@ -63,8 +62,6 @@ const useButtondown = () => {
             if (response.ok) {
                 setIsSubscribed(true)
             }
-        } catch (e) {
-            console.log(e)
         } finally {
             setIsLoading(false)
         }
@@ -108,15 +105,9 @@ const Form = () => {
 
     return (
         <Box
-            css={`
-                max-width: 24rem;
-                margin-left: auto;
-                margin-right: auto;
-            `}
+            alignItems={Box.AlignItems.Center}
             display={Box.Display.Flex}
             el={Box.Element.Form}
-            fluidWidth
-            mt={3}
             onSubmit={handleSubmit}
         >
             <StyledInput

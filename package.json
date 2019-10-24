@@ -35,9 +35,8 @@
         "react": "16.10.2",
         "react-dom": "16.10.2",
         "react-helmet": "5.2.1",
-        "sanitize.css": "11.0.0",
-        "styled-components": "4.4.0",
-        "typeface-inter": "3.10.0"
+        "sanitize.css": "^11.0.0",
+        "styled-components": "4.4.0"
     },
     "devDependencies": {
         "@types/lodash.kebabcase": "4.1.6",

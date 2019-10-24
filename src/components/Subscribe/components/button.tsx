@@ -5,24 +5,17 @@ import Box from '../../Box'
 import LoadingContent from './loading-content'
 
 const StyledButton = styled('button')`
-    ::placeholder {
-        color: ${props => props.theme.colors.secondary};
-    }
     appearance: none;
-    background-color: ${props => props.theme.colors.text};
-    border: ${props =>
-        `${props.theme.borderWidths.normal} ${props.theme.borderStyles.solid} ${props.theme.colors.text}`};
-    border-top-right-radius: ${props => props.theme.radii.large};
-    border-bottom-right-radius: ${props => props.theme.radii.large};
-    color: ${props => props.theme.colors.background};
+    background-color: transparent;
+    border: none;
+    color: ${props => props.theme.colors.secondary};
     cursor: pointer;
-    font-family: ${props => props.theme.fonts.monospace};
-    font-size: ${props => props.theme.fontSizes.small};
-    font-weight: ${props => props.theme.fontWeights[500]};
-    height: 2.25rem;
+    font-family: ${props => props.theme.fonts.body};
+    font-size: ${props => props.theme.fontSizes.root};
+    font-weight: ${props => props.theme.fontWeights.normal};
+    line-height: ${props => props.theme.lineHeights.body};
     outline: none;
-    padding: 5px ${props => props.theme.space[3]}
-        ${props => props.theme.space[1]};
+    padding: 0;
     position: relative;
 
     &[disabled] {

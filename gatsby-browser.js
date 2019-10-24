@@ -1,9 +1,7 @@
-import 'typeface-inter'
 import 'firacode'
-
 import 'sanitize.css'
-import 'sanitize.css/typography.css'
-import 'sanitize.css/forms.css'
+
+import './static/styles/fonts.css'
 
 import Wrapper from 'src/components/wrapper'
 

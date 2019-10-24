@@ -1,6 +1,4 @@
 export enum Radius {
-    Circle = 'circle',
-    Large = 'large',
     None = 'none',
     Small = 'small',
 }

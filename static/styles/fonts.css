@@ -1,0 +1,39 @@
+@font-face {
+    font-family: 'Surt Reg Exp';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/surt/RegularExp.woff2') format('woff2'),
+        url('../fonts/surt/RegularExp.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Surt';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/surt/Light.woff2') format('woff2'),
+        url('../fonts/surt/Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Surt';
+    font-style: italic;
+    font-weight: 400;
+    src: url('../fonts/surt/LightOblique.woff2') format('woff2'),
+        url('../fonts/surt/LightOblique.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Surt';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/surt/SemiBold.woff2') format('woff2'),
+        url('../fonts/surt/SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Surt';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/surt/SemiBold.woff2') format('woff2'),
+        url('../fonts/surt/SemiBold.woff') format('woff');
+}

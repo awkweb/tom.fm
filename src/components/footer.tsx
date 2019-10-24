@@ -1,26 +1,17 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Box from './Box'
-import Subscribe from './Subscribe'
 import Text from './Text'
 
 const Footer = () => (
     <Box el={Box.Element.Footer} my={{ sm: 7, md: 8 }}>
-        <Subscribe />
-        <Box
-            display={Box.Display.Flex}
-            justifyContent={Box.JustifyContent.SpaceBetween}
-            my={7}
-            px={{ sm: 3, md: 5 }}
-        >
-            <Text font={Text.Font.Monospace}>
-                <Link to="/">« Previous</Link>
-            </Text>
-            <Text align={Text.Align.Right} font={Text.Font.Monospace}>
-                <Link to="/">Next »</Link>
-            </Text>
-        </Box>
+        <Text font={Text.Font.Heading}>
+            &copy; 2019 <a href="https://meagher.co">Tom Meagher</a>. Powered by{' '}
+            <a href="https://gatsby.org">GatsbyJS</a> &amp;{' '}
+            <a href="https://now.sh">Now.sh</a>. Set in{' '}
+            <a href="https://blazetype.eu/typecatalogue/surt">Surt</a>. Sign the{' '}
+            <a href="https://www.are.na/tom-meagher/guestbook">Guestbook</a>.
+        </Text>
     </Box>
 )
 

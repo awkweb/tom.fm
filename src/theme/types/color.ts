@@ -1,11 +1,8 @@
 export enum Palette {
-    Accent = 'accent',
     Background = 'background',
     Highlight = 'highlight',
-    Field = 'field',
-    Primary = 'primary',
     Muted = 'muted',
+    Primary = 'primary',
     Secondary = 'secondary',
-    Selection = 'selection',
     Text = 'text',
 }

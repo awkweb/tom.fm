@@ -5,11 +5,10 @@ import Head from 'src/components/head'
 import Post from 'src/components/post'
 
 interface Props {
-    author: string
     posts: Node[]
 }
 
-const Layout = ({ author, posts }: Props) => (
+const Layout = ({ posts }: Props) => (
     <>
         <Head />
         {posts.map(
@@ -22,7 +21,6 @@ const Layout = ({ author, posts }: Props) => (
                 },
             }) => (
                 <Post
-                    author={author}
                     date={date}
                     entry={entry}
                     key={id}

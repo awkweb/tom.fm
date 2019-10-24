@@ -17,18 +17,13 @@ const Blockquote = ({ children, source = '', ...props }: Props) => (
             }
         `}
         mb={5}
-        ml={3}
+        ml={5}
     >
         <Box el={Box.Element.Blockquote} ml={0} my={0} {...props}>
             {children}
         </Box>
         {source && (
-            <Text
-                color={Text.Color.Secondary}
-                el={Text.Element.Cite}
-                lineHeight={Text.LineHeight.Small}
-                size={Text.Size.Small}
-            >
+            <Text color={Text.Color.Secondary} el={Text.Element.Cite}>
                 {props.cite ? <a href={props.cite}>{source}</a> : source}
             </Text>
         )}

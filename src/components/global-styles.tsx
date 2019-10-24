@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     ::selection {
-        background-color: ${props => props.theme.colors.selection};
+        background-color: ${props => props.theme.colors.muted};
         textShadow: none;
     }
 
@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     p {
-        margin-bottom: ${props => props.theme.space[5]};
+        margin-bottom: ${props => props.theme.space[4]};
         margin-top: 0;
     }
 
@@ -34,9 +34,10 @@ const GlobalStyle = createGlobalStyle`
     h5,
     h6 {
         cursor: text;
+        font-family: ${props => props.theme.fonts.heading};
         line-height: ${props => props.theme.lineHeights.heading};
-        margin-bottom: ${props => props.theme.space[3]};
-        margin-top: ${props => props.theme.space[8]};
+        margin-bottom: ${props => props.theme.space[5]};
+        margin-top: 0;
 
         &:hover {
             // gatsby-remark-autolink-headers
@@ -71,14 +72,14 @@ const GlobalStyle = createGlobalStyle`
 
     ul,
     ol {
-        margin-bottom: ${props => props.theme.space[5]};
+        margin-bottom: ${props => props.theme.space[4]};
         margin-left: ${props => props.theme.space[3]};
         margin-top: 0;
         padding-left: ${props => props.theme.space[3]};
     }
 
     pre {
-        margin-bottom: ${props => props.theme.space[5]};
+        margin-bottom: ${props => props.theme.space[4]};
         margin-left: ${props => props.theme.space[3]};
         margin-top: 0;
     }
@@ -92,7 +93,7 @@ const GlobalStyle = createGlobalStyle`
 
     p code {
         border-radius: ${props => props.theme.radii.small};
-        background-color: ${props => props.theme.colors.selection};
+        background-color: ${props => props.theme.colors.muted};
         color: ${props => props.theme.colors.text};
         padding: 1px 3px;
     }
@@ -115,7 +116,6 @@ const GlobalStyle = createGlobalStyle`
 
         figcaption {
             color: ${props => props.theme.colors.secondary};
-            font-size: ${props => props.theme.fontSizes.small};
             margin-top: ${props => props.theme.space[1]};
         }
     }

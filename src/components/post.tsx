@@ -3,11 +3,9 @@ import React, { ReactNode } from 'react'
 import { Link } from 'gatsby'
 
 import Box from './Box'
-import Meta from './meta'
 import Text from './Text'
 
 interface Props {
-    author: string
     children: ReactNode
     date: string
     entry: number
@@ -15,19 +13,18 @@ interface Props {
     title: string
 }
 
-const Post = ({ author, children, date, entry, slug, title }: Props) => {
+const Post = ({ children, date, entry, slug, title }: Props) => {
     return (
-        <Box
-            bb
-            el={Box.Element.Article}
-            mb={{ sm: 6, md: 7 }}
-            pb={{ sm: 6, md: 7 }}
-            px={{ sm: 3, md: 5 }}
-        >
-            <Text el={Text.Element.H1} noMargin size={Text.Size.Heading}>
-                <Link to={slug}>{title}</Link>
+        <Box el={Box.Element.Article} mb={{ sm: 7, md: 9 }}>
+            <Text
+                el={Text.Element.H1}
+                size={Text.Size.Root}
+                weight={Text.Weight.Normal}
+            >
+                <Link to={slug}>
+                    {date} {title}
+                </Link>
             </Text>
-            <Meta author={author} date={date} entry={entry} />
             {children}
         </Box>
     )

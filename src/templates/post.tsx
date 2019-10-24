@@ -6,11 +6,6 @@ import Post from 'src/layouts/post'
 
 interface Props {
     data: {
-        site: {
-            siteMetadata: {
-                author
-            }
-        }
         mdx: Post
     }
 }
@@ -23,13 +18,9 @@ const Template = ({
             frontmatter: { date, title },
             body,
         },
-        site: {
-            siteMetadata: { author },
-        },
     },
 }: Props) => (
     <Post
-        author={author}
         date={date}
         description={description}
         entry={entry}
@@ -42,11 +33,6 @@ const Template = ({
 
 export const query = graphql`
     query PostQuery($path: String!) {
-        site {
-            siteMetadata {
-                author
-            }
-        }
         mdx(fields: { slug: { eq: $path } }) {
             body
             excerpt
@@ -55,7 +41,7 @@ export const query = graphql`
                 slug
             }
             frontmatter {
-                date(formatString: "MMMM DD, YYYY")
+                date(formatString: "MM/DD/YY")
                 title
             }
         }

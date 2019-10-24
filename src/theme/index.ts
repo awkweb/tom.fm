@@ -20,41 +20,37 @@ const borderWidths = {
 }
 
 const colors = {
-    [_Color.Palette.Accent]: 'hsl(328, 50%, 80%)',
-    [_Color.Palette.Background]: 'hsl(240, 100%, 100%)',
-    [_Color.Palette.Highlight]: 'hsl(50, 77%, 85%)',
-    [_Color.Palette.Muted]: 'hsl(240, 5%, 65%)',
-    [_Color.Palette.Primary]: 'hsl(240, 45%, 50%)',
-    [_Color.Palette.Secondary]: 'hsl(240, 5%, 30%)',
-    [_Color.Palette.Selection]: 'hsl(240, 5%, 85%)',
-    [_Color.Palette.Text]: 'hsl(240, 5%, 15%)',
+    [_Color.Palette.Background]: 'hsl(109, 1%, 99%)',
+    [_Color.Palette.Highlight]: 'hsl(50, 80%, 85%)',
+    [_Color.Palette.Muted]: 'hsl(240, 1%, 80%)',
+    [_Color.Palette.Primary]: 'hsl(247, 100%, 47%)',
+    [_Color.Palette.Secondary]: 'hsl(109, 0%, 35%)',
+    [_Color.Palette.Text]: 'hsl(109, 0%, 5%)',
 }
 
 const fonts = {
-    [_Typography.Font.Body]: 'Inter, sans-serif',
-    [_Typography.Font.Heading]: 'Inter, sans-serif',
+    [_Typography.Font.Body]: 'Surt, sans-serif',
+    [_Typography.Font.Heading]: 'Surt Reg Exp, sans-serif',
     [_Typography.Font.Monospace]: 'Fira Code, monospace',
 }
+
 const fontSizes = {
     [_Typography.Size.Body]: toRemString(DEFAULT_PIXEL_SIZE),
-    [_Typography.Size.Heading]: toRemString(18),
+    [_Typography.Size.Heading]: toRemString(16),
     [_Typography.Size.Root]: `${DEFAULT_PIXEL_SIZE}px`,
-    [_Typography.Size.Small]: toRemString(14),
 }
+
 const fontWeights = {
     [_Typography.Weight.Bold]: 700,
-    [_Typography.Weight.Medium]: 500,
     [_Typography.Weight.Normal]: 400,
 }
+
 const lineHeights = {
     [_Typography.LineHeight.Body]: toRemString(28),
-    [_Typography.LineHeight.Heading]: toRemString(30),
-    [_Typography.LineHeight.Small]: toRemString(18),
+    [_Typography.LineHeight.Heading]: toRemString(26),
 }
 
 const radii = {
-    [_Border.Radius.Circle]: '50%',
-    [_Border.Radius.Large]: '8px',
     [_Border.Radius.None]: 0,
     [_Border.Radius.Small]: '2px',
 }

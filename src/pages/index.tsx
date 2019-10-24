@@ -5,11 +5,6 @@ import Layout from 'src/layouts'
 
 interface Props {
     data: {
-        site: {
-            siteMetadata: {
-                author
-            }
-        }
         allMdx: {
             edges: Node[]
         }
@@ -18,20 +13,12 @@ interface Props {
 
 const IndexPage = ({
     data: {
-        site: {
-            siteMetadata: { author },
-        },
         allMdx: { edges: posts },
     },
-}: Props) => <Layout author={author} posts={posts} />
+}: Props) => <Layout posts={posts} />
 
 export const query = graphql`
     query PostsQuery {
-        site {
-            siteMetadata {
-                author
-            }
-        }
         allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
             edges {
                 node {
@@ -41,7 +28,7 @@ export const query = graphql`
                         slug
                     }
                     frontmatter {
-                        date(formatString: "MMMM DD, YYYY")
+                        date(formatString: "MM/DD/YY")
                         title
                     }
                     id

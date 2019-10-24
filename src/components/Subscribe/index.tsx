@@ -22,37 +22,12 @@ const Subscribe = () => {
         }
     `)
     return (
-        <Box
-            background={Box.Background.Accent}
-            borderRadius={{
-                sm: Box.BorderRadius.None,
-                lg: Box.BorderRadius.Large,
-            }}
-            css={`
-                line-height: 24px;
-                a {
-                    color: inherit;
-                    text-decoration: underline;
-                }
-            `}
-            p={{ sm: 3, md: 5 }}
-        >
-            <Text
-                el={Text.Element.P}
-                font={Text.Font.Monospace}
-                noMargin
-                size={Text.Size.Root}
-            >
-                Tune in{' '}
-                <b>
-                    <a href="/feed.xml">via RSS</a>
-                </b>
-                ,{' '}
-                <b>
-                    <a href={`https://twitter.com/${twitter}`}>on Twitter</a>
-                </b>
-                , or drop <b>your E-Mail</b> to receive occasional broadcast
-                round-ups &amp; neat Internet-y things:
+        <Box>
+            <Text el={Text.Element.P} noMargin size={Text.Size.Root}>
+                Tune in <a href="/feed.xml">via RSS</a>,{' '}
+                <a href={`https://twitter.com/${twitter}`}>on Twitter</a>, or
+                drop your E-Mail to receive occasional broadcast round-ups &amp;
+                neat Internet-y things:
             </Text>
             <Form />
         </Box>

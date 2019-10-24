@@ -17,13 +17,11 @@ declare module 'styled-components' {
             [_Border.Width.Thick]: string
         }
         colors: {
-            [_Color.Palette.Accent]: string
             [_Color.Palette.Background]: string
             [_Color.Palette.Highlight]: string
             [_Color.Palette.Muted]: string
             [_Color.Palette.Primary]: string
             [_Color.Palette.Secondary]: string
-            [_Color.Palette.Selection]: string
             [_Color.Palette.Text]: string
         }
         fonts: {
@@ -35,21 +33,16 @@ declare module 'styled-components' {
             [_Typography.Size.Heading]: string
             [_Typography.Size.Body]: string
             [_Typography.Size.Root]: string
-            [_Typography.Size.Small]: string
         }
         fontWeights: {
             [_Typography.Weight.Bold]: number
-            [_Typography.Weight.Medium]: number
             [_Typography.Weight.Normal]: number
         }
         lineHeights: {
             [_Typography.LineHeight.Body]: string
             [_Typography.LineHeight.Heading]: string
-            [_Typography.LineHeight.Small]: string
         }
         radii: {
-            [_Border.Radius.Circle]: string
-            [_Border.Radius.Large]: string
             [_Border.Radius.None]: number
             [_Border.Radius.Small]: string
         }
