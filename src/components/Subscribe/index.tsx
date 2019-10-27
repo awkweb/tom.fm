@@ -24,7 +24,7 @@ const Subscribe = () => {
     return (
         <Box>
             <Text el={Text.Element.P} noMargin>
-                Tune in <a href="/feed.xml">via RSS</a>,{' '}
+                Tune in <a href="/rss.xml">via RSS</a>,{' '}
                 <a href={`https://twitter.com/${twitter}`}>on Twitter</a>, or
                 drop your E-Mail to receive new post updates:
             </Text>
