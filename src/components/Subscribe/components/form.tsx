@@ -92,12 +92,12 @@ const Form = () => {
             <Box
                 alignItems={Box.AlignItems.Center}
                 css={`
-                    height: 2.25rem;
+                    height: 2.5rem;
                 `}
                 display={Box.Display.Flex}
                 mt={3}
             >
-                <Text font={Text.Font.Monospace}>
+                <Text>
                     Subscribed <b>{email}!</b>
                 </Text>
             </Box>

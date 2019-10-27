@@ -28,8 +28,13 @@ const Header = () => (
                 <Box el={Box.Element.Li} mr={{ sm: 3, lg: 4 }}>
                     <Link to="/archive/">Archive</Link>
                 </Box>
-                <Box el={Box.Element.Li}>
+                <Box el={Box.Element.Li} mr={{ sm: 3, lg: 4 }}>
                     <a href="https://meagher.co">About</a>
+                </Box>
+                <Box el={Box.Element.Li}>
+                    <a href="https://www.are.na/tom-meagher/guestbook">
+                        Guestbook
+                    </a>
                 </Box>
             </Box>
         </Box>

@@ -24,7 +24,7 @@ const LoadingSpinner = styled('div')`
         }
     }
     animation: loading 0.5s infinite linear;
-    border: 0.1rem solid ${props => props.theme.colors.background};
+    border: 0.1rem solid ${props => props.theme.colors.text};
     border-radius: 50%;
     border-right-color: transparent;
     border-top-color: transparent;

@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${props => props.theme.colors.background};
         color: ${props => props.theme.colors.text};
         font-family: ${props => props.theme.fonts.body};
-        font-feature-settings: 'calt' on, 'liga' on;
         line-height: ${props => props.theme.lineHeights.body};
         min-height: 100vh;
         text-rendering: optimizeLegibility;
@@ -74,14 +73,15 @@ const GlobalStyle = createGlobalStyle`
     ul,
     ol {
         margin-bottom: ${props => props.theme.space[4]};
-        margin-left: ${props => props.theme.space[3]};
+        margin-left: ${props => props.theme.space[5]};
         margin-top: 0;
-        padding-left: ${props => props.theme.space[3]};
+        padding-left: ${props => props.theme.space[5]};
     }
 
     pre {
-        margin-bottom: ${props => props.theme.space[4]};
-        margin-left: ${props => props.theme.space[3]};
+        margin-bottom: ${props => props.theme.space[5]};
+        margin-top: ${props => props.theme.space[6]};
+        margin-left: ${props => props.theme.space[5]};
         margin-top: 0;
     }
 
@@ -122,11 +122,11 @@ const GlobalStyle = createGlobalStyle`
     }
 
     sup {
-        font-feature-settings: 'sups' on;
-        vertical-align: initial;
+        line-height: 13px;
+        vertical-align: super;
         
         a {
-            font-size: ${props => props.theme.fontSizes.root};
+            font-size: 13px;
             text-decoration: none;
             &::before { content: '['; }
             &::after { content: ']'; }
@@ -141,7 +141,9 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .footnotes {
-        font-size: ${props => props.theme.fontSizes.body};
+        font-size: 95% !important;
+        line-height: 95%;
+        margin-top: ${props => props.theme.space[8]};
     }
 
     .footnote-backref {
