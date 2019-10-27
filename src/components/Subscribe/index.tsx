@@ -23,11 +23,10 @@ const Subscribe = () => {
     `)
     return (
         <Box>
-            <Text el={Text.Element.P} noMargin size={Text.Size.Root}>
+            <Text el={Text.Element.P} noMargin>
                 Tune in <a href="/feed.xml">via RSS</a>,{' '}
                 <a href={`https://twitter.com/${twitter}`}>on Twitter</a>, or
-                drop your E-Mail to receive occasional broadcast round-ups &amp;
-                neat Internet-y things:
+                drop your E-Mail to receive new post updates:
             </Text>
             <Form />
         </Box>

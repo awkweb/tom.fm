@@ -8,14 +8,14 @@ const StyledButton = styled('button')`
     appearance: none;
     background-color: transparent;
     border: none;
-    color: ${props => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.text};
     cursor: pointer;
     font-family: ${props => props.theme.fonts.body};
-    font-size: ${props => props.theme.fontSizes.root};
-    font-weight: ${props => props.theme.fontWeights.normal};
-    line-height: ${props => props.theme.lineHeights.body};
+    font-size: 85%;
+    font-weight: ${props => props.theme.fontWeights.bold};
     outline: none;
-    padding: 0;
+    padding: ${props => props.theme.space[2]} 0 ${props => props.theme.space[2]}
+        ${props => props.theme.space[2]};
     position: relative;
 
     &[disabled] {

@@ -31,6 +31,7 @@ const Wrapper = ({ element }: Props) => (
                         margin-right: auto;
                     `}
                     el={Box.Element.Main}
+                    px={{ sm: 3, lg: 0 }}
                 >
                     <Header />
                     {element}

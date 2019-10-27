@@ -3,19 +3,17 @@ import { Link } from 'gatsby'
 
 import Box from './Box'
 import Text from './Text'
-import Form from './Subscribe/components/form'
 
 const Header = () => (
-    <Box el={Box.Element.Header} mb={{ lg: 8 }} pt={{ lg: 7 }}>
-        <Box mb={{ lg: 3 }}>
+    <Box el={Box.Element.Header} mb={{ sm: 7, lg: 8 }} pt={{ sm: 3, lg: 7 }}>
+        <Box mb={{ sm: 2, lg: 3 }}>
             <Text
                 el={Text.Element.H1}
                 noMargin
                 size={Text.Size.Root}
                 weight={Text.Weight.Normal}
             >
-                tom.fm is hypermedia thoughts on tech, productivity, culture,
-                &amp; related topics.
+                Hypermedia thoughts on tech, productivity, culture, etc.
             </Text>
         </Box>
         <Box
@@ -24,17 +22,16 @@ const Header = () => (
             justifyContent={Box.JustifyContent.SpaceBetween}
         >
             <Box display={Box.Display.Flex} el={Box.Element.Ul} m={0}>
-                <Box el={Box.Element.Li} mr={{ lg: 4 }}>
+                <Box el={Box.Element.Li} mr={{ sm: 3, lg: 4 }}>
                     <Link to="/">Home</Link>
                 </Box>
-                <Box el={Box.Element.Li} mr={{ lg: 4 }}>
-                    <a href="https://meagher.co">About</a>
+                <Box el={Box.Element.Li} mr={{ sm: 3, lg: 4 }}>
+                    <Link to="/archive/">Archive</Link>
                 </Box>
                 <Box el={Box.Element.Li}>
-                    <Link to="/rss.xml">RSS</Link>
+                    <a href="https://meagher.co">About</a>
                 </Box>
             </Box>
-            <Form />
         </Box>
     </Box>
 )

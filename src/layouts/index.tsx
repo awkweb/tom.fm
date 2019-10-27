@@ -16,17 +16,11 @@ const Layout = ({ posts }: Props) => (
                 node: {
                     body,
                     frontmatter: { date, title },
-                    fields: { entry, slug },
+                    fields: { slug },
                     id,
                 },
             }) => (
-                <Post
-                    date={date}
-                    entry={entry}
-                    key={id}
-                    slug={slug}
-                    title={title}
-                >
+                <Post date={date} key={id} slug={slug} title={title}>
                     <MDXRenderer>{body}</MDXRenderer>
                 </Post>
             ),

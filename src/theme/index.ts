@@ -22,7 +22,7 @@ const borderWidths = {
 const colors = {
     [_Color.Palette.Background]: 'hsl(109, 1%, 99%)',
     [_Color.Palette.Highlight]: 'hsl(50, 80%, 85%)',
-    [_Color.Palette.Muted]: 'hsl(240, 1%, 80%)',
+    [_Color.Palette.Muted]: 'hsl(247, 10%, 75%)',
     [_Color.Palette.Primary]: 'hsl(247, 100%, 47%)',
     [_Color.Palette.Secondary]: 'hsl(109, 0%, 35%)',
     [_Color.Palette.Text]: 'hsl(109, 0%, 5%)',

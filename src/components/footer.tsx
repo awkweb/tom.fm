@@ -2,15 +2,15 @@ import React from 'react'
 
 import Box from './Box'
 import Text from './Text'
+import Subscribe from './Subscribe'
 
 const Footer = () => (
-    <Box el={Box.Element.Footer} my={{ sm: 7, md: 8 }}>
-        <Text font={Text.Font.Heading}>
-            &copy; 2019 <a href="https://meagher.co">Tom Meagher</a>. Powered by{' '}
-            <a href="https://gatsby.org">GatsbyJS</a> &amp;{' '}
-            <a href="https://now.sh">Now.sh</a>. Set in{' '}
-            <a href="https://blazetype.eu/typecatalogue/surt">Surt</a>. Sign the{' '}
-            <a href="https://www.are.na/tom-meagher/guestbook">Guestbook</a>.
+    <Box bt el={Box.Element.Footer} my={{ sm: 7, md: 8 }} pt={{ sm: 5, lg: 7 }}>
+        <Box mb={6}>
+            <Subscribe />
+        </Box>
+        <Text color={Text.Color.Secondary}>
+            &copy; 2019 Tom Meagher, unless otherwise specified
         </Text>
     </Box>
 )

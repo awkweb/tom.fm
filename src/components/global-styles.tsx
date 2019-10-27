@@ -33,6 +33,7 @@ const GlobalStyle = createGlobalStyle`
     h4,
     h5,
     h6 {
+        color: ${props => props.theme.colors.text};
         cursor: text;
         font-family: ${props => props.theme.fonts.heading};
         line-height: ${props => props.theme.lineHeights.heading};
@@ -140,7 +141,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     .footnotes {
-        font-size: ${props => props.theme.fontSizes.small};
+        font-size: ${props => props.theme.fontSizes.body};
     }
 
     .footnote-backref {

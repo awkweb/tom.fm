@@ -17,10 +17,10 @@ const StyledInput = styled('input')`
     color: ${props => props.theme.colors.text};
     font-family: ${props => props.theme.fonts.body};
     font-size: ${props => props.theme.fontSizes.root};
-    line-height: ${props => props.theme.lineHeights.body};
     outline: none;
-    min-width: 10.25rem;
-    padding: 0;
+    min-width: 15rem;
+    line-height: ${props => props.theme.lineHeights.body};
+    padding: ${props => props.theme.space[2]} 0;
 `
 
 const useButtondown = () => {
@@ -86,6 +86,7 @@ const Form = () => {
         handleChange,
         handleSubmit,
     } = useButtondown()
+
     if (isSubscribed) {
         return (
             <Box
@@ -105,14 +106,17 @@ const Form = () => {
 
     return (
         <Box
-            alignItems={Box.AlignItems.Center}
-            display={Box.Display.Flex}
+            alignItems={Box.AlignItems.Baseline}
+            bb
+            borderColor={Box.BorderColor.Text}
+            display={Box.Display.InlineFlex}
             el={Box.Element.Form}
+            mt={{ lg: 3 }}
             onSubmit={handleSubmit}
         >
             <StyledInput
                 disabled={isLoading}
-                placeholder="email@example.com"
+                placeholder="email@address.com"
                 value={email}
                 onChange={handleChange}
             />
