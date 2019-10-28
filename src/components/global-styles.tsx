@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
     h4,
     h5,
     h6 {
-        color: ${props => props.theme.colors.text};
+        color: hsl(109, 0%, 2%);
         cursor: text;
         font-family: ${props => props.theme.fonts.heading};
         line-height: ${props => props.theme.lineHeights.heading};

@@ -1,5 +1,4 @@
 export enum Box {
-    Aside = 'aside',
     Article = 'article',
     Blockquote = 'blockquote',
     Div = 'div',

@@ -24,6 +24,7 @@ const Post = ({ children, date, slug, title }: Props) => {
                     <Text el={Text.Element.Time}>{date}</Text> {title}
                 </Link>
             </Text>
+
             {children}
         </Box>
     )

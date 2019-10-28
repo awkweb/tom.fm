@@ -30,11 +30,11 @@ const Wrapper = ({ element }: Props) => (
                         margin-left: auto;
                         margin-right: auto;
                     `}
-                    el={Box.Element.Main}
+                    el={Box.Element.Section}
                     px={{ sm: 3, lg: 0 }}
                 >
                     <Header />
-                    {element}
+                    <Box el={Box.Element.Main}>{element}</Box>
                     <Footer />
                 </Box>
             </MDXProvider>
