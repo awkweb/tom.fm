@@ -12,30 +12,39 @@ interface Props {
 const Layout = ({ posts }: Props) => (
     <>
         <Head />
-        <Box el={Box.Element.Ul} mb={{ sm: 5, lg: 7 }}>
-            {posts.map(
-                ({
-                    node: {
-                        frontmatter: { date, title },
-                        fields: { slug },
-                        id,
-                    },
-                }) => (
-                    <Box el={Box.Element.Li} key={id} mb={3}>
-                        <Text
-                            el={Text.Element.H1}
-                            noMargin
-                            size={Text.Size.Root}
-                            weight={Text.Weight.Normal}
-                        >
-                            <Link to={slug}>
-                                {date} {title}
-                            </Link>
-                        </Text>
-                    </Box>
-                ),
-            )}
-        </Box>
+        <>
+            <Text
+                el={Text.Element.H1}
+                size={Text.Size.Root}
+                weight={Text.Weight.Normal}
+            >
+                Archive
+            </Text>
+            <Box el={Box.Element.Ul} mb={{ sm: 5, lg: 7 }}>
+                {posts.map(
+                    ({
+                        node: {
+                            frontmatter: { date, title },
+                            fields: { slug },
+                            id,
+                        },
+                    }) => (
+                        <Box el={Box.Element.Li} key={id} mb={3}>
+                            <Text
+                                el={Text.Element.H1}
+                                noMargin
+                                size={Text.Size.Root}
+                                weight={Text.Weight.Normal}
+                            >
+                                <Link to={slug}>
+                                    {date} {title}
+                                </Link>
+                            </Text>
+                        </Box>
+                    ),
+                )}
+            </Box>
+        </>
     </>
 )
 

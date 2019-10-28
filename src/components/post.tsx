@@ -14,7 +14,7 @@ interface Props {
 
 const Post = ({ children, date, slug, title }: Props) => {
     return (
-        <Box el={Box.Element.Article} mb={{ sm: 7, lg: 10 }}>
+        <Box el={Box.Element.Article} mb={{ sm: 8, lg: 10 }}>
             <Text
                 el={Text.Element.H1}
                 size={Text.Size.Root}
