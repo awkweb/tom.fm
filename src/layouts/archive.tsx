@@ -11,7 +11,7 @@ interface Props {
 
 const Layout = ({ posts }: Props) => (
     <>
-        <Head />
+        <Head title="Archive" />
         <>
             <Text
                 el={Text.Element.H1}

@@ -8,8 +8,7 @@ const Header = () => (
     <Box el={Box.Element.Header} mb={{ sm: 7, lg: 8 }} pt={{ sm: 3, lg: 7 }}>
         <Box mb={{ sm: 2, lg: 3 }}>
             <Text
-                el={Text.Element.H1}
-                noMargin
+                font={Text.Font.Heading}
                 size={Text.Size.Root}
                 weight={Text.Weight.Normal}
             >

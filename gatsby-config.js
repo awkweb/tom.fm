@@ -5,8 +5,7 @@ module.exports = {
     siteMetadata: {
         title: 'tom.fm',
         siteUrl: 'https://tom.fm',
-        description:
-            'Welcome to tom.fm. A hypermedia broadcasting service transmitting thoughts on technology, productivity, culture, and related topics.',
+        description: 'Hypermedia thoughts on tech, productivity, culture, etc.',
         author: 'Tom Meagher',
         email: 'tom@meagher.co',
         twitter: 'tomfme',

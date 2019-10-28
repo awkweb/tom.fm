@@ -10,7 +10,7 @@ interface Props {
 
 const Layout = ({ posts }: Props) => (
     <>
-        <Head />
+        <Head title="Welcome to tom.fm" />
         {posts.map(
             ({
                 node: {

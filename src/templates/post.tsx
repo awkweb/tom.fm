@@ -14,19 +14,13 @@ const Template = ({
     data: {
         mdx: {
             excerpt: description,
-            fields: { entry, slug },
+            fields: { slug },
             frontmatter: { date, title },
             body,
         },
     },
 }: Props) => (
-    <Post
-        date={date}
-        description={description}
-        entry={entry}
-        slug={slug}
-        title={title}
-    >
+    <Post date={date} description={description} slug={slug} title={title}>
         <MDXRenderer>{body}</MDXRenderer>
     </Post>
 )
@@ -37,7 +31,6 @@ export const query = graphql`
             body
             excerpt
             fields {
-                entry
                 slug
             }
             frontmatter {
