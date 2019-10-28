@@ -21,7 +21,7 @@ const Post = ({ children, date, slug, title }: Props) => {
                 weight={Text.Weight.Normal}
             >
                 <Link to={slug}>
-                    {date} {title}
+                    <Text el={Text.Element.Time}>{date}</Text> {title}
                 </Link>
             </Text>
             {children}
