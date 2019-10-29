@@ -5,7 +5,7 @@ import Box from './Box'
 import Text from './Text'
 
 const Header = () => (
-    <Box el={Box.Element.Header} mb={{ sm: 7, lg: 8 }} pt={{ sm: 3, lg: 7 }}>
+    <Box el={Box.Element.Header} mb={{ sm: 8, lg: 9 }} pt={{ sm: 3, lg: 7 }}>
         <Box mb={{ sm: 2, lg: 3 }}>
             <Text
                 el={Text.Element.H1}
