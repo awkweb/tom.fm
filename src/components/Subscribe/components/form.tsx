@@ -18,9 +18,10 @@ const StyledInput = styled('input')`
     font-family: ${props => props.theme.fonts.body};
     font-size: ${props => props.theme.fontSizes.root};
     outline: none;
-    min-width: 15rem;
+    max-width: 20rem;
     line-height: ${props => props.theme.lineHeights.body};
-    padding: ${props => props.theme.space[2]} 0;
+    padding: 0;
+    width: 100%;
 `
 
 const useButtondown = () => {
@@ -92,7 +93,7 @@ const Form = () => {
             <Box
                 alignItems={Box.AlignItems.Center}
                 css={`
-                    height: 2.5rem;
+                    height: 2.125rem;
                 `}
                 display={Box.Display.Flex}
                 mt={3}
@@ -111,7 +112,7 @@ const Form = () => {
             borderColor={Box.BorderColor.Text}
             display={Box.Display.InlineFlex}
             el={Box.Element.Form}
-            mt={{ lg: 3 }}
+            mt={{ sm: 1, lg: 2 }}
             onSubmit={handleSubmit}
         >
             <StyledInput

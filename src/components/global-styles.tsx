@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
     ::selection {
-        background-color: ${props => props.theme.colors.muted};
+        background-color: ${props => props.theme.colors.highlight};
         textShadow: none;
     }
 
@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     p {
-        margin-bottom: ${props => props.theme.space[4]};
+        margin-bottom: ${props => props.theme.space[3]};
         margin-top: 0;
     }
 
@@ -72,7 +72,7 @@ const GlobalStyle = createGlobalStyle`
 
     ul,
     ol {
-        margin-bottom: ${props => props.theme.space[4]};
+        margin-bottom: ${props => props.theme.space[3]};
         margin-left: ${props => props.theme.space[5]};
         margin-top: 0;
         padding-left: ${props => props.theme.space[5]};

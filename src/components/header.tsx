@@ -5,9 +5,10 @@ import Box from './Box'
 import Text from './Text'
 
 const Header = () => (
-    <Box el={Box.Element.Header} mb={{ sm: 8, lg: 9 }} pt={{ sm: 3, lg: 7 }}>
-        <Box mb={{ sm: 2, lg: 3 }}>
+    <Box el={Box.Element.Header} mb={{ sm: 7, lg: 8 }} pt={{ sm: 3, lg: 7 }}>
+        <Box mb={2}>
             <Text
+                color={Text.Color.Secondary}
                 el={Text.Element.H1}
                 noMargin
                 size={Text.Size.Root}

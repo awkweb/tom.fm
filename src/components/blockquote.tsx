@@ -16,7 +16,7 @@ const Blockquote = ({ children, source = '', ...props }: Props) => (
                 color: inherit;
             }
         `}
-        mb={5}
+        mb={3}
         ml={5}
     >
         <Box el={Box.Element.Blockquote} ml={0} my={0} {...props}>

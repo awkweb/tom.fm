@@ -17,6 +17,7 @@ const StyledButton = styled('button')`
     padding: ${props => props.theme.space[2]} 0 ${props => props.theme.space[2]}
         ${props => props.theme.space[2]};
     position: relative;
+    white-space: nowrap;
 
     &[disabled] {
         cursor: not-allowed;

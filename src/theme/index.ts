@@ -25,7 +25,7 @@ const colors = {
     [_Color.Palette.Muted]: 'hsl(247, 10%, 75%)',
     [_Color.Palette.Primary]: 'hsl(247, 100%, 47%)',
     [_Color.Palette.Secondary]: 'hsl(109, 0%, 35%)',
-    [_Color.Palette.Text]: 'hsl(109, 0%, 5%)',
+    [_Color.Palette.Text]: 'hsl(109, 0%, 10%)',
 }
 
 const fonts = {
@@ -46,8 +46,8 @@ const fontWeights = {
 }
 
 const lineHeights = {
-    [_Typography.LineHeight.Body]: toRemString(28),
-    [_Typography.LineHeight.Heading]: toRemString(26),
+    [_Typography.LineHeight.Body]: toRemString(26),
+    [_Typography.LineHeight.Heading]: toRemString(24),
 }
 
 const radii = {
